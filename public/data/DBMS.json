@@ -1,0 +1,812 @@
+[
+  {
+    "id": 1,
+    "category": "Fundamentals",
+    "q": "What is a DBMS?",
+    "a": "A software system used to create, manage, and provide controlled access to databases."
+  },
+  {
+    "id": 2,
+    "category": "Fundamentals",
+    "q": "Difference between Data and Information.",
+    "a": "Data is raw facts; Information is processed data that provides context and meaning."
+  },
+  {
+    "id": 3,
+    "category": "Fundamentals",
+    "q": "What is Data Independence?",
+    "a": "The ability to modify a schema definition in one level without affecting the schema definition in the next higher level (Physical vs. Logical)."
+  },
+  {
+    "id": 4,
+    "category": "Architecture",
+    "q": "Explain the 3-schema architecture.",
+    "a": "External Level (User views), Conceptual Level (Logical design), and Internal Level (Physical storage)."
+  },
+  {
+    "id": 5,
+    "category": "Relational Model",
+    "q": "What is a Relation in DBMS?",
+    "a": "A table with columns (attributes) and rows (tuples)."
+  },
+  {
+    "id": 6,
+    "category": "Keys",
+    "q": "What is a Primary Key?",
+    "a": "A unique identifier for each record in a table; it cannot contain NULL values."
+  },
+  {
+    "id": 7,
+    "category": "Keys",
+    "q": "What is a Foreign Key?",
+    "a": "An attribute in one table that refers to the Primary Key of another table, establishing a relationship."
+  },
+  {
+    "id": 8,
+    "category": "Keys",
+    "q": "What is a Candidate Key?",
+    "a": "A minimal set of attributes that can uniquely identify a tuple in a relation."
+  },
+  {
+    "id": 9,
+    "category": "Keys",
+    "q": "What is a Super Key?",
+    "a": "A set of one or more attributes that taken collectively allows us to identify uniquely a tuple in the relation."
+  },
+  {
+    "id": 10,
+    "category": "Keys",
+    "q": "What is a Composite Key?",
+    "a": "A primary key that consists of more than one attribute."
+  },
+  {
+    "id": 11,
+    "category": "Keys",
+    "q": "What is a Surrogate Key?",
+    "a": "A system-generated unique identifier (like an auto-incremented ID) that has no business meaning."
+  },
+  {
+    "id": 12,
+    "category": "Constraints",
+    "q": "List common integrity constraints.",
+    "a": "NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT."
+  },
+  {
+    "id": 13,
+    "category": "Relational Algebra",
+    "q": "Name basic operations in Relational Algebra.",
+    "a": "Selection ($\\sigma$), Projection ($\\pi$), Union ($\\cup$), Set Difference ($-$), Cartesian Product ($\\times$), and Rename ($\\rho$)."
+  },
+  {
+    "id": 14,
+    "category": "ER Model",
+    "q": "What is an Entity?",
+    "a": "A 'thing' or 'object' in the real world that is distinguishable from all other objects."
+  },
+  {
+    "id": 15,
+    "category": "ER Model",
+    "q": "What is a Weak Entity?",
+    "a": "An entity that does not have a primary key of its own and depends on a strong entity for its existence."
+  },
+  {
+    "id": 16,
+    "category": "ER Model",
+    "q": "Define Cardinality.",
+    "a": "Specifies the number of instances of one entity that can be associated with instances of another entity (1:1, 1:N, M:N)."
+  },
+  {
+    "id": 17,
+    "category": "SQL",
+    "q": "DDL vs DML.",
+    "a": "DDL (Data Definition Language) defines structure (CREATE, ALTER, DROP). DML (Data Manipulation Language) handles data (SELECT, INSERT, UPDATE, DELETE)."
+  },
+  {
+    "id": 18,
+    "category": "SQL",
+    "q": "What is the difference between DELETE and TRUNCATE?",
+    "a": "DELETE is DML (can be rolled back, uses WHERE). TRUNCATE is DDL (cannot be rolled back, resets identity, faster)."
+  },
+  {
+    "id": 19,
+    "category": "SQL",
+    "q": "What is the difference between DROP and TRUNCATE?",
+    "a": "DROP removes the table and its definition. TRUNCATE removes all rows but keeps the table structure."
+  },
+  {
+    "id": 20,
+    "category": "SQL",
+    "q": "What are Aggregate functions?",
+    "a": "Functions that perform a calculation on a set of values (SUM, AVG, MIN, MAX, COUNT)."
+  },
+  {
+    "id": 21,
+    "category": "SQL",
+    "q": "WHERE vs HAVING.",
+    "a": "WHERE filters rows before grouping. HAVING filters groups after the GROUP BY clause."
+  },
+  {
+    "id": 22,
+    "category": "SQL",
+    "q": "What is an Inner Join?",
+    "a": "Returns records that have matching values in both tables."
+  },
+  {
+    "id": 23,
+    "category": "SQL",
+    "q": "What is a Left Join?",
+    "a": "Returns all records from the left table and matched records from the right table; unmatched right rows result in NULL."
+  },
+  {
+    "id": 24,
+    "category": "SQL",
+    "q": "What is a Full Outer Join?",
+    "a": "Returns all records when there is a match in either left or right table."
+  },
+  {
+    "id": 25,
+    "category": "SQL",
+    "q": "What is a Cross Join?",
+    "a": "Produces a Cartesian product of the two tables."
+  },
+  {
+    "id": 26,
+    "category": "SQL",
+    "q": "What is a Self Join?",
+    "a": "A regular join where a table is joined with itself."
+  },
+  {
+    "id": 27,
+    "category": "SQL",
+    "q": "What is a Subquery?",
+    "a": "A query nested inside another query (Inner query vs Outer query)."
+  },
+  {
+    "id": 28,
+    "category": "SQL",
+    "q": "Correlated vs Non-correlated subquery.",
+    "a": "Non-correlated subqueries can run independently. Correlated subqueries depend on the outer query for their values."
+  },
+  {
+    "id": 29,
+    "category": "SQL",
+    "q": "UNION vs UNION ALL.",
+    "a": "UNION removes duplicate rows. UNION ALL keeps all rows including duplicates."
+  },
+  {
+    "id": 30,
+    "category": "SQL",
+    "q": "What is a View?",
+    "a": "A virtual table based on the result-set of an SQL statement."
+  },
+  {
+    "id": 31,
+    "category": "SQL",
+    "q": "What is a Materialized View?",
+    "a": "A view that physically stores the query result and is updated periodically."
+  },
+  {
+    "id": 32,
+    "category": "Normalization",
+    "q": "What is Normalization?",
+    "a": "Process of organizing data to minimize redundancy and dependency by dividing large tables into smaller ones."
+  },
+  {
+    "id": 33,
+    "category": "Normalization",
+    "q": "What is 1NF?",
+    "a": "Atomicity: Each column must contain atomic (indivisible) values; no repeating groups."
+  },
+  {
+    "id": 34,
+    "category": "Normalization",
+    "q": "What is 2NF?",
+    "a": "Must be in 1NF and all non-key attributes must be fully functionally dependent on the primary key (No partial dependency)."
+  },
+  {
+    "id": 35,
+    "category": "Normalization",
+    "q": "What is 3NF?",
+    "a": "Must be in 2NF and no non-key attribute should be transitively dependent on the primary key."
+  },
+  {
+    "id": 36,
+    "category": "Normalization",
+    "q": "What is BCNF?",
+    "a": "Boyce-Codd Normal Form. For every functional dependency $X \\rightarrow Y$, $X$ must be a super key."
+  },
+  {
+    "id": 37,
+    "category": "Normalization",
+    "q": "What is Functional Dependency?",
+    "a": "A constraint that specifies the relationship between two sets of attributes where one set uniquely determines the other ($X \\rightarrow Y$)."
+  },
+  {
+    "id": 38,
+    "category": "Transactions",
+    "q": "What are ACID properties?",
+    "a": "Atomicity, Consistency, Isolation, Durability."
+  },
+  {
+    "id": 39,
+    "category": "Transactions",
+    "q": "Define Atomicity.",
+    "a": "The 'All or Nothing' property; either the entire transaction succeeds or it is completely rolled back."
+  },
+  {
+    "id": 40,
+    "category": "Transactions",
+    "q": "Define Isolation.",
+    "a": "Ensures that concurrent transactions do not interfere with each other; they appear to execute serially."
+  },
+  {
+    "id": 41,
+    "category": "Transactions",
+    "q": "Define Durability.",
+    "a": "Once a transaction is committed, the changes are permanent even in case of system failure."
+  },
+  {
+    "id": 42,
+    "category": "Transactions",
+    "q": "What is a Transaction Log?",
+    "a": "A file that records all changes made to a database to ensure recovery in case of failure."
+  },
+  {
+    "id": 43,
+    "category": "Concurrency",
+    "q": "What is a Dirty Read?",
+    "a": "When a transaction reads data that has been modified by another transaction but not yet committed."
+  },
+  {
+    "id": 44,
+    "category": "Concurrency",
+    "q": "What is a Non-repeatable Read?",
+    "a": "When a transaction reads the same row twice and gets different data because another transaction modified it in between."
+  },
+  {
+    "id": 45,
+    "category": "Concurrency",
+    "q": "What is a Phantom Read?",
+    "a": "When a transaction re-runs a query returning a set of rows and finds additional rows added by another committed transaction."
+  },
+  {
+    "id": 46,
+    "category": "Concurrency",
+    "q": "List SQL Isolation levels.",
+    "a": "Read Uncommitted, Read Committed, Repeatable Read, Serializable."
+  },
+  {
+    "id": 47,
+    "category": "Indexing",
+    "q": "What is an Index?",
+    "a": "A data structure that improves the speed of data retrieval operations at the cost of slower writes and additional storage."
+  },
+  {
+    "id": 48,
+    "category": "Indexing",
+    "q": "Clustered vs Non-clustered index.",
+    "a": "Clustered: Determines the physical order of data in the table (1 per table). Non-clustered: Separate structure containing pointers to data (multiple allowed)."
+  },
+  {
+    "id": 49,
+    "category": "Indexing",
+    "q": "What is a B-Tree Index?",
+    "a": "A self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time."
+  },
+  {
+    "id": 50,
+    "category": "Indexing",
+    "q": "What is a Hash Index?",
+    "a": "Uses a hash table to find entries; very fast for equality (=) comparisons but useless for range queries."
+  },
+  {
+    "id": 51,
+    "category": "Concurrency",
+    "q": "What is a Deadlock in DBMS?",
+    "a": "A situation where two or more transactions are waiting indefinitely for each other to release locks."
+  },
+  {
+    "id": 52,
+    "category": "Concurrency",
+    "q": "What is 2PL (Two-Phase Locking)?",
+    "a": "A protocol ensuring serializability. It has a Growing phase (obtaining locks) and a Shrinking phase (releasing locks)."
+  },
+  {
+    "id": 53,
+    "category": "Stored Objects",
+    "q": "What is a Stored Procedure?",
+    "a": "A prepared SQL code that you can save and reuse."
+  },
+  {
+    "id": 54,
+    "category": "Stored Objects",
+    "q": "What is a Trigger?",
+    "a": "A special type of stored procedure that automatically runs when an event (INSERT, UPDATE, DELETE) occurs in the database."
+  },
+  {
+    "id": 55,
+    "category": "NoSQL",
+    "q": "What is NoSQL?",
+    "a": "Non-SQL or Not Only SQL; provides a mechanism for storage and retrieval of data modeled in formats other than tabular relations."
+  },
+  {
+    "id": 56,
+    "category": "NoSQL",
+    "q": "Types of NoSQL databases.",
+    "a": "Document, Key-Value, Column-family, Graph."
+  },
+  {
+    "id": 57,
+    "category": "NoSQL",
+    "q": "What is the BASE property?",
+    "a": "Basically Available, Soft state, Eventual consistency (used in NoSQL)."
+  },
+  {
+    "id": 58,
+    "category": "NoSQL",
+    "q": "What is Sharding?",
+    "a": "Horizontal partitioning of data across multiple servers or databases."
+  },
+  {
+    "id": 59,
+    "category": "NoSQL",
+    "q": "What is Replication?",
+    "a": "Storing copies of data on multiple nodes to ensure high availability and fault tolerance."
+  },
+  {
+    "id": 60,
+    "category": "Advanced",
+    "q": "What is a Database Cursor?",
+    "a": "A control structure that enables traversal over the records in a database result set."
+  },
+  {
+    "id": 61,
+    "category": "Advanced",
+    "q": "What is Denormalization?",
+    "a": "The process of adding redundant data to a normalized database to improve read performance."
+  },
+  {
+    "id": 62,
+    "category": "Architecture",
+    "q": "Data Warehouse vs Database.",
+    "a": "Database: Optimized for OLTP (Transactional). Data Warehouse: Optimized for OLAP (Analytical/Historical)."
+  },
+  {
+    "id": 63,
+    "category": "Architecture",
+    "q": "What is ETL?",
+    "a": "Extract, Transform, Load: Process of moving data from source systems to a data warehouse."
+  },
+  {
+    "id": 64,
+    "category": "Security",
+    "q": "What is SQL Injection?",
+    "a": "A vulnerability where an attacker can interfere with the queries an application makes to its database."
+  },
+  {
+    "id": 65,
+    "category": "SQL",
+    "q": "What is the COALESCE function?",
+    "a": "Returns the first non-null value in a list."
+  },
+  {
+    "id": 66,
+    "category": "SQL",
+    "q": "Rank vs Dense_Rank.",
+    "a": "Rank leaves gaps in sequences after ties. Dense_Rank does not leave gaps."
+  },
+  {
+    "id": 67,
+    "category": "SQL",
+    "q": "What is a CTE?",
+    "a": "Common Table Expression; a temporary named result set defined within the execution scope of a single query."
+  },
+  {
+    "id": 68,
+    "category": "Fundamentals",
+    "q": "What is Data Redundancy?",
+    "a": "Duplication of data in multiple places, which can lead to inconsistency and wasted space."
+  },
+  {
+    "id": 69,
+    "category": "Fundamentals",
+    "q": "What is an Anomaly in DBMS?",
+    "a": "Issues (Insertion, Deletion, Update) that arise in poorly designed, unnormalized databases."
+  },
+  {
+    "id": 70,
+    "category": "ER Model",
+    "q": "What is a Multivalued Attribute?",
+    "a": "An attribute that can have more than one value for a single entity instance (e.g., Phone Number)."
+  },
+  {
+    "id": 71,
+    "category": "ER Model",
+    "q": "What is a Derived Attribute?",
+    "a": "An attribute whose value is calculated from other attributes (e.g., Age from Date of Birth)."
+  },
+  {
+    "id": 72,
+    "category": "Relational Model",
+    "q": "What is Referential Integrity?",
+    "a": "Ensures that a value in a foreign key column must match a value in the referenced primary key column or be NULL."
+  },
+  {
+    "id": 73,
+    "category": "SQL",
+    "q": "What is the LIKE operator?",
+    "a": "Used in WHERE clause to search for a specified pattern in a column (using % and _)."
+  },
+  {
+    "id": 74,
+    "category": "SQL",
+    "q": "What is the purpose of the 'AS' keyword?",
+    "a": "Used to give a table or a column a temporary name (Alias)."
+  },
+  {
+    "id": 75,
+    "category": "SQL",
+    "q": "What is the difference between IN and BETWEEN?",
+    "a": "IN matches a value against a list of discrete values. BETWEEN matches against a range of values."
+  },
+  {
+    "id": 76,
+    "category": "Transactions",
+    "q": "What is a Savepoint?",
+    "a": "A point within a transaction to which you can roll back without rolling back the entire transaction."
+  },
+  {
+    "id": 77,
+    "category": "Transactions",
+    "q": "Commit vs Rollback.",
+    "a": "Commit saves changes permanently. Rollback undoes changes since the start of the transaction or last savepoint."
+  },
+  {
+    "id": 78,
+    "category": "Concurrency",
+    "q": "Shared vs Exclusive Lock.",
+    "a": "Shared (S): Allows multiple transactions to read. Exclusive (X): Only one transaction can write/read."
+  },
+  {
+    "id": 79,
+    "category": "Normalization",
+    "q": "What is Lossless Join Decomposition?",
+    "a": "A property ensuring that joining the decomposed tables results in the original table without any extra or missing tuples."
+  },
+  {
+    "id": 80,
+    "category": "Normalization",
+    "q": "What is Dependency Preservation?",
+    "a": "Ensures that all functional dependencies of the original relation are satisfied in the decomposed relations."
+  },
+  {
+    "id": 81,
+    "category": "Indexing",
+    "q": "What is a Composite Index?",
+    "a": "An index on two or more columns of a table."
+  },
+  {
+    "id": 82,
+    "category": "Indexing",
+    "q": "What is a Sparse Index?",
+    "a": "An index that contains an entry for only some of the search-key values (usually one per data block)."
+  },
+  {
+    "id": 83,
+    "category": "Indexing",
+    "q": "What is a Dense Index?",
+    "a": "An index that contains an entry for every search-key value in the data file."
+  },
+  {
+    "id": 84,
+    "category": "Advanced",
+    "q": "What is Query Optimization?",
+    "a": "The process of choosing the most efficient way (execution plan) to execute an SQL statement."
+  },
+  {
+    "id": 85,
+    "category": "Architecture",
+    "q": "What is a Distributed Database?",
+    "a": "A database where portions are stored in multiple physical locations, processing is distributed across multiple nodes."
+  },
+  {
+    "id": 86,
+    "category": "SQL",
+    "q": "What is the EXISTS operator?",
+    "a": "Used to test for the existence of any record in a subquery."
+  },
+  {
+    "id": 87,
+    "category": "SQL",
+    "q": "What is the OFFSET keyword?",
+    "a": "Used with LIMIT to skip a specified number of rows before starting to return rows."
+  },
+  {
+    "id": 88,
+    "category": "Stored Objects",
+    "q": "Stored Procedure vs Function.",
+    "a": "Procedures can have DML/DDL and don't require a return. Functions must return a value and are generally for computation."
+  },
+  {
+    "id": 89,
+    "category": "NoSQL",
+    "q": "What is CAP Theorem?",
+    "a": "In a distributed system, you can only provide two out of: Consistency, Availability, Partition Tolerance."
+  },
+  {
+    "id": 90,
+    "category": "NoSQL",
+    "q": "What is Document-oriented DB?",
+    "a": "Stores data as JSON, BSON, or XML documents (e.g., MongoDB)."
+  },
+  {
+    "id": 91,
+    "category": "Security",
+    "q": "GRANT vs REVOKE.",
+    "a": "GRANT gives permissions to users. REVOKE takes them back."
+  },
+  {
+    "id": 92,
+    "category": "Fundamentals",
+    "q": "What is a Database Schema?",
+    "a": "The logical representation/blueprint of the entire database."
+  },
+  {
+    "id": 93,
+    "category": "Fundamentals",
+    "q": "What is a Database Instance?",
+    "a": "The actual data stored in a database at a particular moment in time."
+  },
+  {
+    "id": 94,
+    "category": "Relational Model",
+    "q": "What is Domain Integrity?",
+    "a": "Defines the valid values for a column (Data type, Range, Format)."
+  },
+  {
+    "id": 95,
+    "category": "SQL",
+    "q": "What is a Cross Apply?",
+    "a": "Similar to a join but used for joining a table to a table-valued function."
+  },
+  {
+    "id": 96,
+    "category": "Indexing",
+    "q": "What is Index Fragmentation?",
+    "a": "Occurs when indexes have many gaps or pages are out of logical order, reducing performance."
+  },
+  {
+    "id": 97,
+    "category": "Normalization",
+    "q": "What is 4NF?",
+    "a": "Must be in BCNF and have no multi-valued dependencies."
+  },
+  {
+    "id": 98,
+    "category": "NoSQL",
+    "q": "What is Graph Database?",
+    "a": "Uses graph structures (nodes, edges, properties) to represent and store data (e.g., Neo4j)."
+  },
+  {
+    "id": 99,
+    "category": "Advanced",
+    "q": "What is Vertical Scaling?",
+    "a": "Increasing capacity by adding more power (CPU, RAM) to an existing server."
+  },
+  {
+    "id": 100,
+    "category": "Advanced",
+    "q": "What is Horizontal Scaling?",
+    "a": "Increasing capacity by adding more servers to the pool."
+  },
+  {
+    "id": 101,
+    "category": "SQL",
+    "q": "What is the use of the 'NULLIF' function?",
+    "a": "Returns NULL if the two arguments are equal; otherwise returns the first argument."
+  },
+  {
+    "id": 102,
+    "category": "Concurrency",
+    "q": "What is Optimistic Locking?",
+    "a": "Assumes multiple transactions can complete without affecting each other; checks for conflicts before committing."
+  },
+  {
+    "id": 103,
+    "category": "Concurrency",
+    "q": "What is Pessimistic Locking?",
+    "a": "Locks data immediately so that no other transaction can modify it until the lock is released."
+  },
+  {
+    "id": 104,
+    "category": "Transactions",
+    "q": "What is a System Failure?",
+    "a": "A crash where the contents of main memory (volatile) are lost, but disk contents (non-volatile) survive."
+  },
+  {
+    "id": 105,
+    "category": "Transactions",
+    "q": "What is Checkpointing?",
+    "a": "A mechanism where all the log records and dirty data blocks are flushed from memory to disk to reduce recovery time."
+  },
+  {
+    "id": 106,
+    "category": "Indexing",
+    "q": "What is a Covering Index?",
+    "a": "An index that contains all the columns needed for a specific query, so the database doesn't need to look up the table."
+  },
+  {
+    "id": 107,
+    "category": "ER Model",
+    "q": "What is ISA relationship?",
+    "a": "Inheritance/Sub-typing in ER modeling (e.g., Student IS A Person)."
+  },
+  {
+    "id": 108,
+    "category": "ER Model",
+    "q": "Specialization vs Generalization.",
+    "a": "Specialization: Top-down (breaking entity into sub-entities). Generalization: Bottom-up (combining sub-entities into one)."
+  },
+  {
+    "id": 109,
+    "category": "SQL",
+    "q": "What is an Intersect operator?",
+    "a": "Returns only the rows that are common to both SELECT statements."
+  },
+  {
+    "id": 110,
+    "category": "SQL",
+    "q": "What is the Except operator?",
+    "a": "Returns rows from the first SELECT statement that are not present in the second SELECT statement."
+  },
+  {
+    "id": 111,
+    "category": "Fundamentals",
+    "q": "What is Metadata?",
+    "a": "Data about data; describes the structure, constraints, and properties of the data."
+  },
+  {
+    "id": 112,
+    "category": "Architecture",
+    "q": "What is a Database Administrator (DBA)?",
+    "a": "The person responsible for managing, securing, and maintaining the database system."
+  },
+  {
+    "id": 113,
+    "category": "SQL",
+    "q": "What are Window Functions?",
+    "a": "Functions that perform calculations across a set of table rows that are related to the current row (e.g., OVER clause)."
+  },
+  {
+    "id": 114,
+    "category": "Advanced",
+    "q": "What is Parallel Databases?",
+    "a": "A DBMS that runs on multiple processors/disks designed to execute operations in parallel to improve performance."
+  },
+  {
+    "id": 115,
+    "category": "Normalization",
+    "q": "What is Partial Dependency?",
+    "a": "When a non-prime attribute depends on only part of a composite primary key."
+  },
+  {
+    "id": 116,
+    "category": "Normalization",
+    "q": "What is Transitive Dependency?",
+    "a": "When a non-prime attribute depends on another non-prime attribute ($A \\rightarrow B \\rightarrow C$)."
+  },
+  {
+    "id": 117,
+    "category": "NoSQL",
+    "q": "Consistency vs Eventual Consistency.",
+    "a": "Consistency: All nodes see same data at same time. Eventual: Nodes will eventually converge to same state after some time."
+  },
+  {
+    "id": 118,
+    "category": "Advanced",
+    "q": "What is a Star Schema?",
+    "a": "A data modeling style with a central fact table surrounded by dimension tables (used in Data Warehousing)."
+  },
+  {
+    "id": 119,
+    "category": "Advanced",
+    "q": "What is a Snowflake Schema?",
+    "a": "An extension of star schema where dimension tables are normalized into multiple related tables."
+  },
+  {
+    "id": 120,
+    "category": "SQL",
+    "q": "What is the 'CASE' expression?",
+    "a": "SQL's way of handling if-then-else logic within a query."
+  },
+  {
+    "id": 121,
+    "category": "SQL",
+    "q": "What is 'String_Agg' (or Group_Concat)?",
+    "a": "An aggregate function that concatenates strings from a group into a single string with a delimiter."
+  },
+  {
+    "id": 122,
+    "category": "Advanced",
+    "q": "What is a Big Data?",
+    "a": "Extremely large data sets that may be analyzed computationally to reveal patterns, trends, and associations."
+  },
+  {
+    "id": 123,
+    "category": "Architecture",
+    "q": "What is Multi-tenancy?",
+    "a": "A software architecture in which a single instance of software serves multiple customers (tenants)."
+  },
+  {
+    "id": 124,
+    "category": "NoSQL",
+    "q": "What is Cassandra?",
+    "a": "A highly scalable, high-performance distributed NoSQL database (Column-family)."
+  },
+  {
+    "id": 125,
+    "category": "NoSQL",
+    "q": "What is Redis?",
+    "a": "An in-memory data structure store, used as a database, cache, and message broker (Key-Value)."
+  },
+  {
+    "id": 126,
+    "category": "Security",
+    "q": "What is Data Masking?",
+    "a": "The process of obscuring specific data elements within a database to protect sensitive information."
+  },
+  {
+    "id": 127,
+    "category": "Security",
+    "q": "What is Encryption at Rest?",
+    "a": "Securing data that is stored on physical media (disks, tapes) so it cannot be read if the hardware is stolen."
+  },
+  {
+    "id": 128,
+    "category": "Fundamentals",
+    "q": "What is the Catalog?",
+    "a": "A repository that contains information about the structure of the database (metadata)."
+  },
+  {
+    "id": 129,
+    "category": "Architecture",
+    "q": "What is a Schema Evolution?",
+    "a": "The process of changing the database schema over time while preserving existing data."
+  },
+  {
+    "id": 130,
+    "category": "Advanced",
+    "q": "What is Polyglot Persistence?",
+    "a": "Using different data storage technologies to handle different data storage needs within the same application."
+  },
+  {
+    "id": 131,
+    "category": "SQL",
+    "q": "How to select unique records?",
+    "a": "Using the DISTINCT keyword."
+  },
+  {
+    "id": 132,
+    "category": "Concurrency",
+    "q": "What is Deadlock Detection?",
+    "a": "The process of the DBMS periodically checking for cycles in the wait-for graph and aborting a transaction to break the cycle."
+  },
+  {
+    "id": 133,
+    "category": "Relational Model",
+    "q": "What is an Attribute?",
+    "a": "A named column of a relation."
+  },
+  {
+    "id": 134,
+    "category": "Relational Model",
+    "q": "What is a Tuple?",
+    "a": "A row of a relation."
+  },
+  {
+    "id": 135,
+    "category": "Scenario",
+    "q": "Why use an Index if it slows down writes?",
+    "a": "Because in most applications, read operations far outnumber write operations, and the performance gain in searching justifies the cost."
+  }
+]

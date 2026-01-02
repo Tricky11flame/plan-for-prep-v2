@@ -1,0 +1,812 @@
+[
+  {
+    "id": 1,
+    "category": "OOPS Fundamentals",
+    "q": "What is the difference between a Class and an Object?",
+    "a": "A Class is a blueprint or template that defines variables and methods. An Object is an instance of a class that occupies memory and has a state."
+  },
+  {
+    "id": 2,
+    "category": "OOPS Fundamentals",
+    "q": "What are the four main pillars of OOPS?",
+    "a": "Abstraction, Encapsulation, Inheritance, and Polymorphism."
+  },
+  {
+    "id": 3,
+    "category": "OOPS Fundamentals",
+    "q": "Define Abstraction.",
+    "a": "The process of hiding complex implementation details and showing only the essential features of an object to the user."
+  },
+  {
+    "id": 4,
+    "category": "OOPS Fundamentals",
+    "q": "Define Encapsulation.",
+    "a": "The bundling of data (variables) and methods that operate on that data into a single unit (class), while restricting direct access to data via access modifiers."
+  },
+  {
+    "id": 5,
+    "category": "OOPS Fundamentals",
+    "q": "Define Inheritance.",
+    "a": "A mechanism where one class (child/subclass) acquires the properties and behaviors of another class (parent/superclass)."
+  },
+  {
+    "id": 6,
+    "category": "OOPS Fundamentals",
+    "q": "Define Polymorphism.",
+    "a": "The ability of a message or function to be displayed in more than one form (e.g., one method name behaving differently based on context)."
+  },
+  {
+    "id": 7,
+    "category": "Polymorphism",
+    "q": "What is Compile-time Polymorphism?",
+    "a": "Also known as Static Binding or Method Overloading. It occurs when multiple methods in the same class have the same name but different signatures."
+  },
+  {
+    "id": 8,
+    "category": "Polymorphism",
+    "q": "What is Runtime Polymorphism?",
+    "a": "Also known as Dynamic Binding or Method Overriding. It occurs when a subclass provides a specific implementation of a method already defined in its superclass."
+  },
+  {
+    "id": 9,
+    "category": "Inheritance",
+    "q": "What is the Diamond Problem?",
+    "a": "A conflict that arises in multiple inheritance when a class inherits from two classes that both inherit from a common superclass, leading to ambiguity in method calls."
+  },
+  {
+    "id": 10,
+    "category": "Abstraction",
+    "q": "What is an Abstract Class?",
+    "a": "A class that cannot be instantiated and may contain abstract methods (methods without a body). It serves as a base for other classes."
+  },
+  {
+    "id": 11,
+    "category": "Abstraction",
+    "q": "What is an Interface?",
+    "a": "A blueprint of a class that contains only abstract methods and constants. It defines 'what' a class must do, but not 'how'."
+  },
+  {
+    "id": 12,
+    "category": "Abstraction",
+    "q": "Abstract Class vs Interface.",
+    "a": "Abstract classes can have state (fields) and constructor; Interfaces generally cannot (prior to modern language updates). A class can implement multiple interfaces but inherit only one abstract class."
+  },
+  {
+    "id": 13,
+    "category": "Polymorphism",
+    "q": "What is a Virtual Function?",
+    "a": "A function in a base class that is expected to be overridden in derived classes to achieve runtime polymorphism."
+  },
+  {
+    "id": 14,
+    "category": "Polymorphism",
+    "q": "What is a Pure Virtual Function?",
+    "a": "A virtual function with no implementation in the base class (e.g., 'virtual void draw() = 0;' in C++), making the class abstract."
+  },
+  {
+    "id": 15,
+    "category": "OOPS Fundamentals",
+    "q": "What does the 'static' keyword do?",
+    "a": "It indicates that a member belongs to the class itself rather than to instances of the class. Static members are shared across all objects."
+  },
+  {
+    "id": 16,
+    "category": "OOPS Fundamentals",
+    "q": "What does the 'final' (or 'sealed') keyword do?",
+    "a": "It prevents further modification. A final class cannot be inherited; a final method cannot be overridden; a final variable cannot be reassigned."
+  },
+  {
+    "id": 17,
+    "category": "OOPS Fundamentals",
+    "q": "Explain 'this' vs 'super'.",
+    "a": "'this' refers to the current instance of the class. 'super' refers to the immediate parent class instance or constructor."
+  },
+  {
+    "id": 18,
+    "category": "OOPS Fundamentals",
+    "q": "What is a Constructor?",
+    "a": "A special method used to initialize objects. It has the same name as the class and no return type."
+  },
+  {
+    "id": 19,
+    "category": "OOPS Fundamentals",
+    "q": "What is a Destructor?",
+    "a": "A method called when an object is destroyed or goes out of scope, used to release resources (primarily in C++)."
+  },
+  {
+    "id": 20,
+    "category": "OOPS Fundamentals",
+    "q": "Deep Copy vs Shallow Copy.",
+    "a": "Shallow copy copies the object's bit-patterns (references stay the same). Deep copy creates a new copy of the objects referred to by the original."
+  },
+  {
+    "id": 21,
+    "category": "OOPS Fundamentals",
+    "q": "Explain Access Modifiers.",
+    "a": "Keywords (Private, Protected, Public, Default) that set the visibility and accessibility of classes, methods, and variables."
+  },
+  {
+    "id": 22,
+    "category": "LLD Concepts",
+    "q": "Aggregation vs Composition.",
+    "a": "Both are 'Has-A' relationships. Aggregation is a weak relationship (child can exist without parent). Composition is a strong relationship (child dies with parent)."
+  },
+  {
+    "id": 23,
+    "category": "LLD Concepts",
+    "q": "What is Association?",
+    "a": "A general relationship between two classes where they use each other's services, but have no ownership."
+  },
+  {
+    "id": 24,
+    "category": "LLD Concepts",
+    "q": "What is Coupling?",
+    "a": "The degree of interdependence between software modules. Low coupling is preferred for better maintainability."
+  },
+  {
+    "id": 25,
+    "category": "LLD Concepts",
+    "q": "What is Cohesion?",
+    "a": "The degree to which elements within a module work together to fulfill a single purpose. High cohesion is preferred."
+  },
+  {
+    "id": 26,
+    "category": "SOLID Principles",
+    "q": "What is the Single Responsibility Principle (SRP)?",
+    "a": "A class should have only one reason to change, meaning it should perform only one specific task."
+  },
+  {
+    "id": 27,
+    "category": "SOLID Principles",
+    "q": "What is the Open-Closed Principle (OCP)?",
+    "a": "Software entities should be open for extension but closed for modification."
+  },
+  {
+    "id": 28,
+    "category": "SOLID Principles",
+    "q": "What is the Liskov Substitution Principle (LSP)?",
+    "a": "Subtypes must be substitutable for their base types without affecting the correctness of the program."
+  },
+  {
+    "id": 29,
+    "category": "SOLID Principles",
+    "q": "What is the Interface Segregation Principle (ISP)?",
+    "a": "Clients should not be forced to depend on interfaces they do not use; split large interfaces into smaller, specific ones."
+  },
+  {
+    "id": 30,
+    "category": "SOLID Principles",
+    "q": "What is the Dependency Inversion Principle (DIP)?",
+    "a": "High-level modules should not depend on low-level modules. Both should depend on abstractions."
+  },
+  {
+    "id": 31,
+    "category": "Design Patterns",
+    "q": "What are Creational Design Patterns?",
+    "a": "Patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation (e.g., Singleton, Factory)."
+  },
+  {
+    "id": 32,
+    "category": "Design Patterns",
+    "q": "What are Structural Design Patterns?",
+    "a": "Patterns that explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient (e.g., Adapter, Decorator)."
+  },
+  {
+    "id": 33,
+    "category": "Design Patterns",
+    "q": "What are Behavioral Design Patterns?",
+    "a": "Patterns concerned with algorithms and the assignment of responsibilities between objects (e.g., Observer, Strategy)."
+  },
+  {
+    "id": 34,
+    "category": "Design Patterns",
+    "q": "Explain the Singleton Pattern.",
+    "a": "Ensures a class has only one instance and provides a global point of access to it."
+  },
+  {
+    "id": 35,
+    "category": "Design Patterns",
+    "q": "Explain the Factory Method Pattern.",
+    "a": "Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created."
+  },
+  {
+    "id": 36,
+    "category": "Design Patterns",
+    "q": "Explain the Builder Pattern.",
+    "a": "Separates the construction of a complex object from its representation so that the same construction process can create different representations."
+  },
+  {
+    "id": 37,
+    "category": "Design Patterns",
+    "q": "Explain the Prototype Pattern.",
+    "a": "Allows cloning existing objects without making your code dependent on their classes."
+  },
+  {
+    "id": 38,
+    "category": "Design Patterns",
+    "q": "Explain the Adapter Pattern.",
+    "a": "Allows objects with incompatible interfaces to collaborate by acting as a bridge/wrapper."
+  },
+  {
+    "id": 39,
+    "category": "Design Patterns",
+    "q": "Explain the Proxy Pattern.",
+    "a": "Provides a substitute or placeholder for another object to control access to it (e.g., lazy loading, logging)."
+  },
+  {
+    "id": 40,
+    "category": "Design Patterns",
+    "q": "Explain the Decorator Pattern.",
+    "a": "Allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class."
+  },
+  {
+    "id": 41,
+    "category": "Design Patterns",
+    "q": "Explain the Observer Pattern.",
+    "a": "Defines a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing."
+  },
+  {
+    "id": 42,
+    "category": "Design Patterns",
+    "q": "Explain the Strategy Pattern.",
+    "a": "Defines a family of algorithms, encapsulates each one, and makes them interchangeable at runtime."
+  },
+  {
+    "id": 43,
+    "category": "Design Patterns",
+    "q": "Explain the State Pattern.",
+    "a": "Allows an object to alter its behavior when its internal state changes. The object will appear to change its class."
+  },
+  {
+    "id": 44,
+    "category": "Design Patterns",
+    "q": "Explain the Command Pattern.",
+    "a": "Turns a request into a stand-alone object that contains all information about the request (useful for undo/redo and queuing)."
+  },
+  {
+    "id": 45,
+    "category": "Design Patterns",
+    "q": "Explain the Template Method Pattern.",
+    "a": "Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps without changing the structure."
+  },
+  {
+    "id": 46,
+    "category": "Design Patterns",
+    "q": "How to implement a Thread-Safe Singleton?",
+    "a": "Use synchronized blocks or a static inner helper class (Bill Pugh Singleton) to ensure only one thread creates the instance."
+  },
+  {
+    "id": 47,
+    "category": "Design Patterns",
+    "q": "What is Double-Checked Locking?",
+    "a": "A technique to reduce the overhead of acquisition of a lock by testing the locking criterion before acquiring the lock."
+  },
+  {
+    "id": 48,
+    "category": "Design Patterns",
+    "q": "Explain the Bridge Pattern.",
+    "a": "Decouples an abstraction from its implementation so that the two can vary independently."
+  },
+  {
+    "id": 49,
+    "category": "Design Patterns",
+    "q": "Explain the Flyweight Pattern.",
+    "a": "Reduces the cost of creating and manipulating a large number of similar objects by sharing common state."
+  },
+  {
+    "id": 50,
+    "category": "Design Patterns",
+    "q": "Explain the Facade Pattern.",
+    "a": "Provides a simplified interface to a library, a framework, or any other complex set of classes."
+  },
+  {
+    "id": 51,
+    "category": "Design Patterns",
+    "q": "Explain the Mediator Pattern.",
+    "a": "Restricts direct communications between objects and forces them to collaborate only via a mediator object."
+  },
+  {
+    "id": 52,
+    "category": "Design Patterns",
+    "q": "Explain the Memento Pattern.",
+    "a": "Allows saving and restoring the previous state of an object without revealing the details of its implementation."
+  },
+  {
+    "id": 53,
+    "category": "Design Patterns",
+    "q": "Explain the Chain of Responsibility Pattern.",
+    "a": "Passes requests along a chain of handlers. Upon receiving a request, each handler decides either to process it or pass it to the next."
+  },
+  {
+    "id": 54,
+    "category": "Design Patterns",
+    "q": "Explain the Iterator Pattern.",
+    "a": "Lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.)."
+  },
+  {
+    "id": 55,
+    "category": "Design Patterns",
+    "q": "Explain the Visitor Pattern.",
+    "a": "Lets you separate algorithms from the objects on which they operate."
+  },
+  {
+    "id": 56,
+    "category": "LLD Principles",
+    "q": "What is the DRY Principle?",
+    "a": "Don't Repeat Yourself. Every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
+  },
+  {
+    "id": 57,
+    "category": "LLD Principles",
+    "q": "What is the KISS Principle?",
+    "a": "Keep It Simple, Stupid. Systems work best if they are kept simple rather than made complicated."
+  },
+  {
+    "id": 58,
+    "category": "LLD Principles",
+    "q": "What is the YAGNI Principle?",
+    "a": "You Aren't Gonna Need It. Don't add functionality until it is deemed necessary."
+  },
+  {
+    "id": 59,
+    "category": "LLD Principles",
+    "q": "Composition over Inheritance.",
+    "a": "The principle that classes should achieve polymorphic behavior and code reuse by their composition rather than inheritance from a base or parent class."
+  },
+  {
+    "id": 60,
+    "category": "LLD Scenarios",
+    "q": "What classes would you need to design an Elevator system?",
+    "a": "ElevatorController, ElevatorCar, InternalButtons, ExternalButtons, Door, Motor, Floor."
+  },
+  {
+    "id": 61,
+    "category": "LLD Scenarios",
+    "q": "What classes are essential for a Parking Lot design?",
+    "a": "ParkingLot, Level, ParkingSpot (Motorcycle, Compact, Large), Vehicle, Ticket, EntryGate, ExitGate, PaymentStation."
+  },
+  {
+    "id": 62,
+    "category": "LLD Scenarios",
+    "q": "Library Management System key classes.",
+    "a": "Library, Member, Librarian, BookItem, BookStatus, Rack, Fine, Notification."
+  },
+  {
+    "id": 63,
+    "category": "LLD Scenarios",
+    "q": "How do you model Vending Machine states?",
+    "a": "IdleState, NoMoneyState, HasMoneyState, SelectionState, OutOfStockState, DispensingState."
+  },
+  {
+    "id": 64,
+    "category": "LLD Principles",
+    "q": "What is a Class Diagram (UML)?",
+    "a": "A static diagram that describes the structure of a system by showing the system's classes, their attributes, operations, and the relationships among objects."
+  },
+  {
+    "id": 65,
+    "category": "LLD Principles",
+    "q": "What is a Sequence Diagram?",
+    "a": "An interaction diagram that shows how processes operate with one another and in what order."
+  },
+  {
+    "id": 66,
+    "category": "LLD Principles",
+    "q": "What is an Activity Diagram?",
+    "a": "A flow chart to represent the flow from one activity to another activity."
+  },
+  {
+    "id": 67,
+    "category": "OOPS Fundamentals",
+    "q": "What are Accessors and Mutators?",
+    "a": "Accessors (getters) are used to read private fields. Mutators (setters) are used to modify private fields with validation."
+  },
+  {
+    "id": 68,
+    "category": "OOPS Fundamentals",
+    "q": "What is an Immutable Class?",
+    "a": "A class whose state cannot be changed after it is created (e.g., String in Java). Requires final fields and no setters."
+  },
+  {
+    "id": 69,
+    "category": "Inheritance",
+    "q": "How do Java/C# handle multiple inheritance?",
+    "a": "They disallow multiple inheritance of classes to avoid the Diamond Problem but allow multiple inheritance of interfaces."
+  },
+  {
+    "id": 70,
+    "category": "Polymorphism",
+    "q": "What is RTTI (Runtime Type Information)?",
+    "a": "A mechanism that allows the type of an object to be determined during program execution (e.g., 'instanceof' in Java)."
+  },
+  {
+    "id": 71,
+    "category": "Inheritance",
+    "q": "Upcasting vs Downcasting.",
+    "a": "Upcasting: Casting a subclass to a superclass (safe). Downcasting: Casting a superclass to a subclass (unsafe, requires type check)."
+  },
+  {
+    "id": 72,
+    "category": "Polymorphism",
+    "q": "What are Covariant Return Types?",
+    "a": "Allows a method to return a subclass type of the return type declared in the parent method when overriding."
+  },
+  {
+    "id": 73,
+    "category": "OOPS Fundamentals",
+    "q": "What is a Friend Function (C++)?",
+    "a": "A function that is not a member of a class but has access to its private and protected members."
+  },
+  {
+    "id": 74,
+    "category": "OOPS Fundamentals",
+    "q": "What are Inline Functions?",
+    "a": "Functions where the compiler replaces the call with the actual code to reduce function call overhead."
+  },
+  {
+    "id": 75,
+    "category": "OOPS Fundamentals",
+    "q": "What is the 'explicit' keyword in C++?",
+    "a": "Used to mark constructors so they cannot be used for implicit type conversions."
+  },
+  {
+    "id": 76,
+    "category": "OOPS Fundamentals",
+    "q": "Why use Virtual Destructors?",
+    "a": "To ensure that the destructor of the derived class is called when deleting a derived object through a base pointer, preventing memory leaks."
+  },
+  {
+    "id": 77,
+    "category": "OOPS Fundamentals",
+    "q": "What is a Default Constructor?",
+    "a": "A constructor with no arguments provided automatically by the compiler if no other constructor is defined."
+  },
+  {
+    "id": 78,
+    "category": "OOPS Fundamentals",
+    "q": "What is a Copy Constructor?",
+    "a": "A constructor used to create a new object as a copy of an existing object."
+  },
+  {
+    "id": 79,
+    "category": "OOPS Fundamentals",
+    "q": "Assignment Operator vs Copy Constructor.",
+    "a": "Copy constructor initializes a new object. Assignment operator modifies an already initialized object."
+  },
+  {
+    "id": 80,
+    "category": "OOPS Fundamentals",
+    "q": "Garbage Collection and Destructors.",
+    "a": "Languages with Garbage Collection (Java, C#) don't have deterministic destructors; they use Finalizers or 'dispose' patterns."
+  },
+  {
+    "id": 81,
+    "category": "OOPS Fundamentals",
+    "q": "What are Inner Classes?",
+    "a": "Classes defined inside another class, used to logically group classes that are only used in one place."
+  },
+  {
+    "id": 82,
+    "category": "OOPS Fundamentals",
+    "q": "What are Anonymous Classes?",
+    "a": "Inner classes without a name, used for creating objects with minor modifications to methods of an existing class."
+  },
+  {
+    "id": 83,
+    "category": "OOPS Fundamentals",
+    "q": "What are Nested Classes?",
+    "a": "Static inner classes that do not require an instance of the outer class."
+  },
+  {
+    "id": 84,
+    "category": "Encapsulation",
+    "q": "Can private members be accessed in subclasses?",
+    "a": "No. Private members are only accessible within the same class. Use 'Protected' for subclass visibility."
+  },
+  {
+    "id": 85,
+    "category": "OOPS Fundamentals",
+    "q": "What is a Method Signature?",
+    "a": "The combination of method name and parameter types (and order)."
+  },
+  {
+    "id": 86,
+    "category": "Polymorphism",
+    "q": "What is Dynamic Binding?",
+    "a": "Determining which method implementation to use at runtime based on the actual object type."
+  },
+  {
+    "id": 87,
+    "category": "Polymorphism",
+    "q": "What is Static Binding?",
+    "a": "Determining which method implementation to use at compile-time (e.g., static, private, or final methods)."
+  },
+  {
+    "id": 88,
+    "category": "Polymorphism",
+    "q": "What are Polymorphic Variables?",
+    "a": "A variable of a superclass type that can hold a reference to any of its subclasses."
+  },
+  {
+    "id": 89,
+    "category": "OOPS Fundamentals",
+    "q": "Generic Programming vs OOPS.",
+    "a": "OOPS focuses on objects and inheritance. Generics focus on algorithms and types (templates) without duplicating code for different types."
+  },
+  {
+    "id": 90,
+    "category": "Polymorphism",
+    "q": "What is Duck Typing?",
+    "a": "A style of typing where an object's suitability is determined by the presence of certain methods and properties, rather than its inheritance."
+  },
+  {
+    "id": 91,
+    "category": "SOLID Principles",
+    "q": "OCP Example.",
+    "a": "Instead of modifying a 'TaxCalculator' class to add a new country, create a 'TaxStrategy' interface and implement it for each country."
+  },
+  {
+    "id": 92,
+    "category": "SOLID Principles",
+    "q": "LSP Example.",
+    "a": "If a Penguin class inherits from Bird, but Bird has a fly() method, Penguin violates LSP because it cannot fly."
+  },
+  {
+    "id": 93,
+    "category": "SOLID Principles",
+    "q": "ISP Example.",
+    "a": "A 'MultiFunctionPrinter' interface with print, scan, and fax. A 'SimplePrinter' should only implement a 'Printer' interface, not the whole set."
+  },
+  {
+    "id": 94,
+    "category": "SOLID Principles",
+    "q": "DIP vs Dependency Injection (DI).",
+    "a": "DIP is the principle (the goal). DI is a design pattern/technique to achieve that goal (passing dependencies into a class)."
+  },
+  {
+    "id": 95,
+    "category": "SOLID Principles",
+    "q": "What is an IoC Container?",
+    "a": "A framework that manages object creation and life cycle, injecting dependencies automatically (e.g., Spring, Guice)."
+  },
+  {
+    "id": 96,
+    "category": "SOLID Principles",
+    "q": "Constructor vs Setter Injection.",
+    "a": "Constructor injection ensures mandatory dependencies are provided. Setter injection allows optional or mutable dependencies."
+  },
+  {
+    "id": 97,
+    "category": "SOLID Principles",
+    "q": "What indicates an SRP violation?",
+    "a": "If a class has too many imports, a very large number of methods, or if changing one feature forces a re-test of unrelated ones."
+  },
+  {
+    "id": 98,
+    "category": "LLD Principles",
+    "q": "Why favor Interfaces over Concrete classes?",
+    "a": "It reduces coupling, makes testing easier with mocks, and allows swapping implementations without changing client code."
+  },
+  {
+    "id": 99,
+    "category": "LLD Principles",
+    "q": "What is 'Programming to an Interface'?",
+    "a": "Client code should depend on an interface type (e.g., List) rather than a concrete implementation (e.g., ArrayList)."
+  },
+  {
+    "id": 100,
+    "category": "Polymorphism",
+    "q": "What is Behavioral Subtyping?",
+    "a": "Another name for LSP; ensuring subclasses maintain the behavior expected by the base class contract."
+  },
+  {
+    "id": 101,
+    "category": "Design Patterns",
+    "q": "Singleton and Unit Testing.",
+    "a": "Singletons are hard to test because they maintain global state across tests. Mocking them often requires reflection or design changes."
+  },
+  {
+    "id": 102,
+    "category": "Design Patterns",
+    "q": "Abstract Factory vs Factory Method.",
+    "a": "Factory Method is a single method. Abstract Factory is an object that contains multiple factory methods to create a family of products."
+  },
+  {
+    "id": 103,
+    "category": "Design Patterns",
+    "q": "Facade vs Decorator.",
+    "a": "Facade simplifies the interface. Decorator adds features while maintaining the interface."
+  },
+  {
+    "id": 104,
+    "category": "Design Patterns",
+    "q": "Adapter vs Proxy.",
+    "a": "Adapter changes the interface to match another. Proxy keeps the interface but adds logic (like access control)."
+  },
+  {
+    "id": 105,
+    "category": "Design Patterns",
+    "q": "Strategy vs State.",
+    "a": "In Strategy, the client chooses the algorithm. In State, the object changes its behavior based on internal state transitions."
+  },
+  {
+    "id": 106,
+    "category": "Design Patterns",
+    "q": "Observer Pattern in UI.",
+    "a": "Used for event listeners; when a button is clicked, all registered listeners are notified."
+  },
+  {
+    "id": 107,
+    "category": "Design Patterns",
+    "q": "Command Pattern use case.",
+    "a": "Implementing an 'Undo' button by storing commands in a stack."
+  },
+  {
+    "id": 108,
+    "category": "Design Patterns",
+    "q": "Explain Composite Pattern.",
+    "a": "Lets you treat individual objects and compositions of objects uniformly (e.g., File system folders and files)."
+  },
+  {
+    "id": 109,
+    "category": "Design Patterns",
+    "q": "Explain Null Object Pattern.",
+    "a": "Providing an object that does nothing instead of using 'null' to avoid NullPointerExceptions."
+  },
+  {
+    "id": 110,
+    "category": "Design Patterns",
+    "q": "Service Locator Pattern.",
+    "a": "An alternative to DI where a central registry provides instances of requested services."
+  },
+  {
+    "id": 111,
+    "category": "LLD Patterns",
+    "q": "Data Access Object (DAO) Pattern.",
+    "a": "Separates the business logic from the persistence logic (database interaction)."
+  },
+  {
+    "id": 112,
+    "category": "LLD Patterns",
+    "q": "Data Transfer Object (DTO) Pattern.",
+    "a": "An object used to carry data between processes to reduce the number of method calls."
+  },
+  {
+    "id": 113,
+    "category": "LLD Patterns",
+    "q": "What is a Value Object?",
+    "a": "A small object that represents a simple entity whose equality is based on its values, not identity (e.g., Money, Color)."
+  },
+  {
+    "id": 114,
+    "category": "LLD Patterns",
+    "q": "What is an Entity Object?",
+    "a": "An object defined by its identity and life cycle rather than just its attributes (e.g., a User with an ID)."
+  },
+  {
+    "id": 115,
+    "category": "LLD Patterns",
+    "q": "Repository Pattern.",
+    "a": "Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects."
+  },
+  {
+    "id": 116,
+    "category": "LLD Patterns",
+    "q": "Active Record vs Data Mapper.",
+    "a": "Active Record: Objects include data and database logic. Data Mapper: Separation between data object and database logic."
+  },
+  {
+    "id": 117,
+    "category": "LLD Principles",
+    "q": "What is the Law of Demeter?",
+    "a": "Each unit should have only limited knowledge about other units: only units 'closely' related to the current unit ('Talk to friends, not strangers')."
+  },
+  {
+    "id": 118,
+    "category": "LLD Principles",
+    "q": "Tell Don't Ask principle.",
+    "a": "Instead of asking an object for its data and then acting on it, you should tell the object what to do."
+  },
+  {
+    "id": 119,
+    "category": "LLD Principles",
+    "q": "Separation of Concerns.",
+    "a": "Designing a system so that each part addresses a separate concern (e.g., MVC pattern)."
+  },
+  {
+    "id": 120,
+    "category": "LLD Principles",
+    "q": "Encapsulate what varies.",
+    "a": "Identify the aspects of your application that vary and separate them from what stays the same."
+  },
+  {
+    "id": 121,
+    "category": "LLD Principles",
+    "q": "Least Knowledge Principle.",
+    "a": "Another name for the Law of Demeter; minimize the number of objects a method communicates with."
+  },
+  {
+    "id": 122,
+    "category": "LLD Scenarios",
+    "q": "Tic-Tac-Toe LLD classes.",
+    "a": "Board, Cell, Player, Piece (X, O), GameEngine."
+  },
+  {
+    "id": 123,
+    "category": "LLD Scenarios",
+    "q": "Snake and Ladder LLD classes.",
+    "a": "Board, Cell, Player, Die, Snake, Ladder."
+  },
+  {
+    "id": 124,
+    "category": "LLD Scenarios",
+    "q": "Movie Ticket Booking key entities.",
+    "a": "Cinema, Hall, Screen, Show, Seat, Booking, Payment, Movie."
+  },
+  {
+    "id": 125,
+    "category": "LLD Scenarios",
+    "q": "Ride Booking (Uber) key entities.",
+    "a": "User (Rider, Driver), Vehicle, Location, Trip, Payment, FareCalculator."
+  },
+  {
+    "id": 126,
+    "category": "LLD Scenarios",
+    "q": "Splitwise LLD key entities.",
+    "a": "User, Group, Expense, SplitStrategy (Equal, Percentage, Exact), BalanceSheet."
+  },
+  {
+    "id": 127,
+    "category": "LLD Scenarios",
+    "q": "Stack Overflow LLD classes.",
+    "a": "User, Question, Answer, Comment, Vote, Tag, Badge, Reputation."
+  },
+  {
+    "id": 128,
+    "category": "LLD Scenarios",
+    "q": "ATM LLD states.",
+    "a": "IdleState, HasCardState, PinEnteredState, CashWithdrawalState, TransactionCompleteState."
+  },
+  {
+    "id": 129,
+    "category": "LLD Scenarios",
+    "q": "Hotel Management LLD key entities.",
+    "a": "Hotel, Room (Type, Status), Guest, Booking, Invoice, Receptionist, Housekeeping."
+  },
+  {
+    "id": 130,
+    "category": "LLD Scenarios",
+    "q": "Chess Game LLD classes.",
+    "a": "Board, Cell, Piece (King, Queen, etc.), Move, Player, GameController."
+  },
+  {
+    "id": 131,
+    "category": "OOPS Fundamentals",
+    "q": "What is Method Chaining?",
+    "a": "A technique where multiple methods are called in a single statement by having each method return the current object instance (this)."
+  },
+  {
+    "id": 132,
+    "category": "LLD Principles",
+    "q": "What is a Fluent Interface?",
+    "a": "An API design that relies on method chaining to make the code more readable and like natural language."
+  },
+  {
+    "id": 133,
+    "category": "Design Patterns",
+    "q": "Explain Object Pool Pattern.",
+    "a": "Maintains a set of initialized objects that are kept ready to use rather than allocated and destroyed on demand."
+  },
+  {
+    "id": 134,
+    "category": "LLD Principles",
+    "q": "What is Lazy Initialization?",
+    "a": "The tactic of delaying the creation of an object, the calculation of a value, or some other expensive process until the first time it is needed."
+  },
+  {
+    "id": 135,
+    "category": "Polymorphism",
+    "q": "What is Double Dispatch?",
+    "a": "A mechanism that dispatches a function call to different concrete functions depending on the runtime types of two objects involved in the call (used in Visitor pattern)."
+  }
+]

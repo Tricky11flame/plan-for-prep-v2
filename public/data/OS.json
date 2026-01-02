@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "category": "Fundamentals",
+    "q": "What is an Operating System?",
+    "a": "A software program that acts as an intermediary between computer hardware and the user, managing hardware resources and providing a platform for application programs."
+  },
+  {
+    "id": 2,
+    "category": "Fundamentals",
+    "q": "Differentiate between Kernel mode and User mode.",
+    "a": "Kernel mode has unrestricted access to hardware and all CPU instructions; used for core OS tasks. User mode has restricted access; applications run here to prevent system crashes from faulty code."
+  },
+  {
+    "id": 3,
+    "category": "Fundamentals",
+    "q": "What is a Kernel?",
+    "a": "The core part of an OS that manages system resources (CPU, memory, I/O) and facilitates communication between hardware and software."
+  },
+  {
+    "id": 4,
+    "category": "Fundamentals",
+    "q": "Define Monolithic vs Microkernel.",
+    "a": "Monolithic: All OS services run in kernel space (fast but unstable if one service fails). Microkernel: Only essential services run in kernel space; others run in user space (stable and modular but slower due to IPC overhead)."
+  },
+  {
+    "id": 5,
+    "category": "Fundamentals",
+    "q": "What is a System Call?",
+    "a": "A programmatic way in which a computer program requests a service from the kernel of the operating system."
+  },
+  {
+    "id": 6,
+    "category": "Process Management",
+    "q": "What is a Process?",
+    "a": "A program in execution. It includes the program code, current activity (program counter), and resources like memory and file handles."
+  },
+  {
+    "id": 7,
+    "category": "Process Management",
+    "q": "What are the states of a process?",
+    "a": "New, Ready, Running, Waiting (Blocked), Terminated."
+  },
+  {
+    "id": 8,
+    "category": "Process Management",
+    "q": "What is a Process Control Block (PCB)?",
+    "a": "A data structure used by the OS to store all information about a process, including PID, state, PC, registers, and memory limits."
+  },
+  {
+    "id": 9,
+    "category": "Process Management",
+    "q": "What is Context Switching?",
+    "a": "The process of saving the state of a running process/thread and loading the saved state of another process/thread so execution can be resumed later."
+  },
+  {
+    "id": 10,
+    "category": "Process Management",
+    "q": "Why is Context Switching considered overhead?",
+    "a": "The CPU does no 'useful' work while switching; it spends time saving/loading registers and updating memory maps."
+  },
+  {
+    "id": 11,
+    "category": "Threads",
+    "q": "What is a Thread?",
+    "a": "The smallest unit of CPU utilization; a 'lightweight process' that shares the code, data, and resources of its parent process but has its own stack and registers."
+  },
+  {
+    "id": 12,
+    "category": "Threads",
+    "q": "Process vs Thread.",
+    "a": "Processes are independent and have separate memory spaces. Threads belong to a process and share the same memory space, making communication faster but more complex due to synchronization."
+  },
+  {
+    "id": 13,
+    "category": "Threads",
+    "q": "What are User-level vs Kernel-level threads?",
+    "a": "User-level: Managed by a thread library; kernel is unaware of them. Kernel-level: Managed directly by the OS; if one thread blocks, others can still run."
+  },
+  {
+    "id": 14,
+    "category": "Process Management",
+    "q": "What is an Orphan Process?",
+    "a": "A process whose parent has finished or terminated, though it remains running. It is typically adopted by 'init' (PID 1)."
+  },
+  {
+    "id": 15,
+    "category": "Process Management",
+    "q": "What is a Zombie Process?",
+    "a": "A process that has completed execution but still has an entry in the process table to allow the parent to read its exit status."
+  },
+  {
+    "id": 16,
+    "category": "Scheduling",
+    "q": "What is the goal of CPU Scheduling?",
+    "a": "To maximize CPU utilization, maximize throughput, and minimize turnaround, waiting, and response times."
+  },
+  {
+    "id": 17,
+    "category": "Scheduling",
+    "q": "Explain FCFS Scheduling.",
+    "a": "First-Come, First-Served. Simple but suffers from the 'Convoy Effect' where short processes wait behind a very long process."
+  },
+  {
+    "id": 18,
+    "category": "Scheduling",
+    "q": "Explain SJF (Shortest Job First) Scheduling.",
+    "a": "Selects the process with the smallest burst time. It is optimal for minimizing average waiting time but can lead to starvation of long processes."
+  },
+  {
+    "id": 19,
+    "category": "Scheduling",
+    "q": "What is Round Robin Scheduling?",
+    "a": "A preemptive algorithm where each process is assigned a fixed time slot (quantum) in cyclic order. Ideal for time-sharing systems."
+  },
+  {
+    "id": 20,
+    "category": "Scheduling",
+    "q": "Explain Preemptive vs Non-preemptive scheduling.",
+    "a": "Preemptive: OS can interrupt a running process (e.g., Round Robin). Non-preemptive: Process holds the CPU until it terminates or blocks (e.g., FCFS)."
+  },
+  {
+    "id": 21,
+    "category": "Scheduling",
+    "q": "What is Starvation in OS?",
+    "a": "A situation where a process is perpetually denied necessary resources (usually CPU time) because other processes are constantly prioritized."
+  },
+  {
+    "id": 22,
+    "category": "Scheduling",
+    "q": "What is Aging in scheduling?",
+    "a": "A technique used to prevent starvation by gradually increasing the priority of processes that wait in the system for a long time."
+  },
+  {
+    "id": 23,
+    "category": "Synchronization",
+    "q": "What is a Critical Section?",
+    "a": "A segment of code where shared resources are accessed. Only one process should execute in its critical section at a time."
+  },
+  {
+    "id": 24,
+    "category": "Synchronization",
+    "q": "What is a Race Condition?",
+    "a": "A situation where multiple processes/threads access and manipulate the same data concurrently, and the outcome depends on the specific order of execution."
+  },
+  {
+    "id": 25,
+    "category": "Synchronization",
+    "q": "What is a Mutex?",
+    "a": "A locking mechanism used to synchronize access to a resource. It is binary (locked/unlocked) and can only be released by the thread that locked it."
+  },
+  {
+    "id": 26,
+    "category": "Synchronization",
+    "q": "What is a Semaphore?",
+    "a": "A signaling mechanism (integer variable). Wait (P) decrements and Signal (V) increments. Counting semaphores allow a fixed number of processes to access a resource."
+  },
+  {
+    "id": 27,
+    "category": "Synchronization",
+    "q": "Mutex vs Semaphore.",
+    "a": "Mutex is a locking mechanism (ownership exists); Semaphore is a signaling mechanism (no ownership). Mutex is binary; Semaphore can be counting."
+  },
+  {
+    "id": 28,
+    "category": "Synchronization",
+    "q": "What are Monitors?",
+    "a": "High-level synchronization constructs that encapsulate shared variables and the procedures that operate on them, ensuring mutual exclusion automatically."
+  },
+  {
+    "id": 29,
+    "category": "Deadlocks",
+    "q": "What is a Deadlock?",
+    "a": "A state where a set of processes are blocked because each process is holding a resource and waiting for another resource held by another process."
+  },
+  {
+    "id": 30,
+    "category": "Deadlocks",
+    "q": "List the four necessary conditions for Deadlock.",
+    "a": "1. Mutual Exclusion 2. Hold and Wait 3. No Preemption 4. Circular Wait."
+  },
+  {
+    "id": 31,
+    "category": "Deadlocks",
+    "q": "What is Deadlock Prevention?",
+    "a": "Designing the system so that at least one of the four deadlock conditions cannot hold."
+  },
+  {
+    "id": 32,
+    "category": "Deadlocks",
+    "q": "What is Deadlock Avoidance?",
+    "a": "The OS dynamically checks the resource allocation state to ensure a 'safe state' always exists (e.g., Banker's Algorithm)."
+  },
+  {
+    "id": 33,
+    "category": "Deadlocks",
+    "q": "Explain the Banker's Algorithm.",
+    "a": "Used for deadlock avoidance. It tests for safety by simulating the allocation of predetermined maximum possible amounts of all resources, then makes an 's-state' check to test for possible activities."
+  },
+  {
+    "id": 34,
+    "category": "Memory Management",
+    "q": "What is Virtual Memory?",
+    "a": "A technique that allows execution of processes that are not completely in memory. It provides an illusion of a very large main memory."
+  },
+  {
+    "id": 35,
+    "category": "Memory Management",
+    "q": "What is Paging?",
+    "a": "A memory management scheme that eliminates the need for contiguous allocation. Physical memory is divided into fixed-size frames, and logical memory into pages."
+  },
+  {
+    "id": 36,
+    "category": "Memory Management",
+    "q": "What is a Page Fault?",
+    "a": "An interrupt that occurs when a program tries to access a page that is mapped in virtual address space but not currently loaded in physical memory (RAM)."
+  },
+  {
+    "id": 37,
+    "category": "Memory Management",
+    "q": "What is Thrashing?",
+    "a": "A state where the CPU spends more time swapping pages in and out than executing instructions, caused by a process not having enough frames."
+  },
+  {
+    "id": 38,
+    "category": "Memory Management",
+    "q": "Internal vs External Fragmentation.",
+    "a": "Internal: Unused memory within a fixed-size block (paging). External: Total free memory exists but is not contiguous (segmentation)."
+  },
+  {
+    "id": 39,
+    "category": "Memory Management",
+    "q": "Explain the LRU (Least Recently Used) algorithm.",
+    "a": "A page replacement policy that replaces the page that has not been used for the longest period of time."
+  },
+  {
+    "id": 40,
+    "category": "Memory Management",
+    "q": "What is Segmentation?",
+    "a": "A memory management scheme that supports the user's view of memory. A program is a collection of segments (stack, main, functions, etc.)."
+  },
+  {
+    "id": 41,
+    "category": "Memory Management",
+    "q": "What is TLB (Translation Lookaside Buffer)?",
+    "a": "A small, fast hardware cache used to reduce the time taken to access a user memory location by storing recent virtual-to-physical address translations."
+  },
+  {
+    "id": 42,
+    "category": "Memory Management",
+    "q": "What is Belady's Anomaly?",
+    "a": "A phenomenon where increasing the number of page frames results in an increase in the number of page faults for certain access patterns (occurs in FIFO)."
+  },
+  {
+    "id": 43,
+    "category": "Storage Management",
+    "q": "What is a File System?",
+    "a": "The part of the OS responsible for managing files and directories on storage devices, including allocation and access control."
+  },
+  {
+    "id": 44,
+    "category": "Storage Management",
+    "q": "What is an Inode?",
+    "a": "A data structure in Unix-style file systems that describes a file-system object such as a file or a directory (stores metadata, not the name or data)."
+  },
+  {
+    "id": 45,
+    "category": "Storage Management",
+    "q": "Hard Link vs Soft (Symbolic) Link.",
+    "a": "Hard Link: Points directly to the inode; deleting the original file doesn't break it. Soft Link: Points to the file path; deleting the original breaks the link."
+  },
+  {
+    "id": 46,
+    "category": "Storage Management",
+    "q": "Explain Disk Scheduling (SSTF).",
+    "a": "Shortest Seek Time First. Selects the request with the minimum seek time from the current head position. Can lead to starvation."
+  },
+  {
+    "id": 47,
+    "category": "Storage Management",
+    "q": "Explain Disk Scheduling (SCAN/Elevator).",
+    "a": "The head moves in one direction to the end, then reverses, servicing requests along the way."
+  },
+  {
+    "id": 48,
+    "category": "I/O Systems",
+    "q": "What is Spooling?",
+    "a": "Simultaneous Peripheral Operations On-Line. Placing data in a temporary working area for another program to process (e.g., Print Spooler)."
+  },
+  {
+    "id": 49,
+    "category": "I/O Systems",
+    "q": "What is DMA (Direct Memory Access)?",
+    "a": "A feature that allows hardware subsystems to access main system memory independently of the CPU, speeding up data transfer."
+  },
+  {
+    "id": 50,
+    "category": "Security",
+    "q": "What is the difference between Authentication and Authorization?",
+    "a": "Authentication: Verifying who you are. Authorization: Verifying what you are allowed to do."
+  },
+  {
+    "id": 51,
+    "category": "Fundamentals",
+    "q": "What is RAID?",
+    "a": "Redundant Array of Independent Disks. A technology that combines multiple physical disk drives into a single logical unit for data redundancy or performance improvement."
+  },
+  {
+    "id": 52,
+    "category": "Fundamentals",
+    "q": "Difference between RAID 0 and RAID 1.",
+    "a": "RAID 0 (Striping): Performance, no redundancy. RAID 1 (Mirroring): Redundancy, no performance gain from striping."
+  },
+  {
+    "id": 53,
+    "category": "Process Management",
+    "q": "What is the 'fork()' system call?",
+    "a": "Creates a new process (child) by duplicating the calling process (parent). Both continue from the same point with different PIDs."
+  },
+  {
+    "id": 54,
+    "category": "Process Management",
+    "q": "What is the 'exec()' system call?",
+    "a": "Replaces the current process image with a new program."
+  },
+  {
+    "id": 55,
+    "category": "Synchronization",
+    "q": "What is Busy Waiting?",
+    "a": "A technique in which a process repeatedly checks a condition (like a lock) in a loop, consuming CPU cycles without doing useful work."
+  },
+  {
+    "id": 56,
+    "category": "Fundamentals",
+    "q": "What is Cache Memory?",
+    "a": "A small, high-speed volatile memory which provides high-speed data access to the processor and stores frequently used computer programs and data."
+  },
+  {
+    "id": 57,
+    "category": "Memory Management",
+    "q": "What is Locality of Reference?",
+    "a": "The tendency of a processor to access the same set of memory locations repetitively over a short period of time (Temporal and Spatial)."
+  },
+  {
+    "id": 58,
+    "category": "Scheduling",
+    "q": "What is a Multilevel Queue Scheduling?",
+    "a": "Partitions the ready queue into several separate queues (e.g., foreground and background) with different scheduling needs."
+  },
+  {
+    "id": 59,
+    "category": "Fundamentals",
+    "q": "What is a Boot Loader?",
+    "a": "A small program that loads the operating system into memory when a computer is started."
+  },
+  {
+    "id": 60,
+    "category": "I/O Systems",
+    "q": "What is Interrupt vs Polling?",
+    "a": "Interrupt: Hardware notifies the CPU when it needs attention. Polling: CPU periodically checks hardware status."
+  },
+  {
+    "id": 61,
+    "category": "Process Management",
+    "q": "What is an Inter-Process Communication (IPC)?",
+    "a": "Mechanisms provided by the OS that allow processes to communicate and synchronize their actions (e.g., Shared Memory, Message Passing)."
+  },
+  {
+    "id": 62,
+    "category": "Synchronization",
+    "q": "What is a Spinlock?",
+    "a": "A lock where the thread waits in a loop (spins) repeatedly checking if the lock is available. Efficient only for very short wait times."
+  },
+  {
+    "id": 63,
+    "category": "Memory Management",
+    "q": "What is Paging with Segmentation?",
+    "a": "A hybrid approach where segments are divided into pages to gain the benefits of both (user-view logic and hardware-efficient allocation)."
+  },
+  {
+    "id": 64,
+    "category": "Advanced",
+    "q": "What is a Real-Time Operating System (RTOS)?",
+    "a": "An OS intended to serve real-time applications that process data as it comes in, typically without buffer delays. Timing is critical."
+  },
+  {
+    "id": 65,
+    "category": "Advanced",
+    "q": "Hard vs Soft Real-Time Systems.",
+    "a": "Hard: Missing a deadline is a total system failure. Soft: Missing a deadline results in degraded performance but not failure."
+  },
+  {
+    "id": 66,
+    "category": "Advanced",
+    "q": "What is a Distributed OS?",
+    "a": "An OS that manages a group of independent computers and makes them appear to be a single computer."
+  },
+  {
+    "id": 67,
+    "category": "Scheduling",
+    "q": "What is Priority Inversion?",
+    "a": "A scenario where a high-priority task is indirectly preempted by a lower-priority task (often involving a shared resource held by a medium-priority task)."
+  },
+  {
+    "id": 68,
+    "category": "Storage Management",
+    "q": "What is a Journaling File System?",
+    "a": "A file system that keeps a log (journal) of changes not yet committed to the main part of the file system to improve crash recovery."
+  },
+  {
+    "id": 69,
+    "category": "Fundamentals",
+    "q": "What is 'Dual Mode' operation?",
+    "a": "The hardware support that allows the OS to protect itself and other system components by having User Mode and Kernel Mode."
+  },
+  {
+    "id": 70,
+    "category": "Process Management",
+    "q": "What is the role of a Dispatcher?",
+    "a": "The module that gives control of the CPU to the process selected by the short-term scheduler."
+  },
+  {
+    "id": 71,
+    "category": "Memory Management",
+    "q": "What is 'Swapping'?",
+    "a": "Moving a process temporarily out of main memory to a backing store (disk) and then bringing it back into memory for continued execution."
+  },
+  {
+    "id": 72,
+    "category": "Memory Management",
+    "q": "What is a 'Working Set'?",
+    "a": "The set of pages in the virtual address space of a process that is currently resident in physical memory."
+  },
+  {
+    "id": 73,
+    "category": "Memory Management",
+    "q": "What is Page Coloring?",
+    "a": "A technique used to map virtual pages to physical frames in a way that minimizes cache conflicts."
+  },
+  {
+    "id": 74,
+    "category": "Synchronization",
+    "q": "What is the Producer-Consumer Problem?",
+    "a": "A classic synchronization problem where a producer adds items to a buffer and a consumer removes them, requiring careful coordination to avoid overflow/underflow."
+  },
+  {
+    "id": 75,
+    "category": "Synchronization",
+    "q": "What is the Dining Philosophers Problem?",
+    "a": "A classic problem used to illustrate synchronization issues and deadlock; philosophers must share forks to eat."
+  },
+  {
+    "id": 76,
+    "category": "Deadlocks",
+    "q": "What is a Resource Allocation Graph?",
+    "a": "A directed graph used to track which processes hold which resources and which processes are waiting for which resources."
+  },
+  {
+    "id": 77,
+    "category": "Fundamentals",
+    "q": "What is BIOS?",
+    "a": "Basic Input/Output System. Firmware used to perform hardware initialization during the booting process."
+  },
+  {
+    "id": 78,
+    "category": "Storage Management",
+    "q": "What is Disk Mirroring?",
+    "a": "Writing data to two or more disks simultaneously so that if one fails, the data is still available on the other."
+  },
+  {
+    "id": 79,
+    "category": "Advanced",
+    "q": "What is Virtualization in OS?",
+    "a": "The ability to run multiple operating systems on a single physical machine by abstraction of resources using a Hypervisor."
+  },
+  {
+    "id": 80,
+    "category": "Advanced",
+    "q": "Type 1 vs Type 2 Hypervisor.",
+    "a": "Type 1 (Bare Metal): Runs directly on hardware. Type 2 (Hosted): Runs as an application on another OS."
+  },
+  {
+    "id": 81,
+    "category": "Security",
+    "q": "What is a Trap?",
+    "a": "A software-generated interrupt caused either by an error (e.g., division by zero) or a specific request from a user program (system call)."
+  },
+  {
+    "id": 82,
+    "category": "Fundamentals",
+    "q": "What is Throughput?",
+    "a": "The number of processes that are completed per unit time."
+  },
+  {
+    "id": 83,
+    "category": "Scheduling",
+    "q": "What is Turnaround Time?",
+    "a": "The total time from the submission of a process to the time of its completion."
+  },
+  {
+    "id": 84,
+    "category": "Scheduling",
+    "q": "What is Response Time?",
+    "a": "The time from the submission of a request until the first response is produced."
+  },
+  {
+    "id": 85,
+    "category": "I/O Systems",
+    "q": "What is Device Driver?",
+    "a": "A specific software that allows the OS to communicate with a particular hardware device."
+  },
+  {
+    "id": 86,
+    "category": "Storage Management",
+    "q": "What is File Allocation Table (FAT)?",
+    "a": "A file system architecture that uses a table to track the clusters of a file."
+  },
+  {
+    "id": 87,
+    "category": "Storage Management",
+    "q": "What is NTFS?",
+    "a": "New Technology File System. The standard file system for Windows, providing security, reliability, and advanced features."
+  },
+  {
+    "id": 88,
+    "category": "Memory Management",
+    "q": "What is a Dirty Bit?",
+    "a": "A bit in the page table that is set when the page is modified, indicating that it must be written back to disk before being replaced."
+  },
+  {
+    "id": 89,
+    "category": "Fundamentals",
+    "q": "What is Shell?",
+    "a": "The interface between the user and the kernel, allowing users to interact with the OS via commands."
+  },
+  {
+    "id": 90,
+    "category": "Memory Management",
+    "q": "What is Demand Paging?",
+    "a": "An optimization where pages are loaded into memory only when they are actually needed (on-demand)."
+  },
+  {
+    "id": 91,
+    "category": "Threads",
+    "q": "What is Thread Safety?",
+    "a": "A property of code that guarantees it will function correctly and safely when executed by multiple threads simultaneously."
+  },
+  {
+    "id": 92,
+    "category": "Process Management",
+    "q": "What is Context in a process?",
+    "a": "The set of data including register values, stack pointer, and program counter that describes the state of a process."
+  },
+  {
+    "id": 93,
+    "category": "Advanced",
+    "q": "What is Containerization?",
+    "a": "A lightweight form of virtualization that shares the host OS kernel and packages applications with their dependencies."
+  },
+  {
+    "id": 94,
+    "category": "Memory Management",
+    "q": "What is the Page Table?",
+    "a": "A data structure used by the OS to store the mapping between virtual addresses and physical addresses."
+  },
+  {
+    "id": 95,
+    "category": "Advanced",
+    "q": "What is a Microkernel architecture advantage?",
+    "a": "Reliability and security; if a non-essential service crashes, the rest of the system remains functional."
+  },
+  {
+    "id": 96,
+    "category": "Fundamentals",
+    "q": "What is a GUI?",
+    "a": "Graphical User Interface. Allows users to interact with the system using visual elements like icons and menus."
+  },
+  {
+    "id": 97,
+    "category": "Synchronization",
+    "q": "What is an Atomic Operation?",
+    "a": "An operation that is completed entirely or not at all; it cannot be interrupted or seen in an intermediate state."
+  },
+  {
+    "id": 98,
+    "category": "Scheduling",
+    "q": "What is a Time Quantum?",
+    "a": "The small unit of time assigned to a process in Round Robin scheduling."
+  },
+  {
+    "id": 99,
+    "category": "Storage Management",
+    "q": "What is Disk Fragmentation?",
+    "a": "A condition where file contents are scattered across different non-contiguous areas of a disk, slowing down access."
+  },
+  {
+    "id": 100,
+    "category": "I/O Systems",
+    "q": "What is Buffering?",
+    "a": "Storing data temporarily in memory while it is being moved between two devices or between a device and an application."
+  },
+  {
+    "id": 101,
+    "category": "Advanced",
+    "q": "What is Symmetric Multiprocessing (SMP)?",
+    "a": "An architecture where two or more identical processors are connected to a single, shared main memory and have full access to all I/O devices."
+  },
+  {
+    "id": 102,
+    "category": "Advanced",
+    "q": "Asymmetric vs Symmetric Multiprocessing.",
+    "a": "Asymmetric: One master processor controls the system and schedules tasks for slave processors. Symmetric: All processors are peers; each runs its own scheduler."
+  },
+  {
+    "id": 103,
+    "category": "Security",
+    "q": "What is a Trojan Horse?",
+    "a": "A type of malware that misleads users of its true intent by appearing as a legitimate program."
+  },
+  {
+    "id": 104,
+    "category": "Security",
+    "q": "What is a Virus vs Worm?",
+    "a": "Virus: Needs a host file/program to spread. Worm: A standalone program that replicates itself over a network."
+  },
+  {
+    "id": 105,
+    "category": "Fundamentals",
+    "q": "What is Multi-programming?",
+    "a": "The ability to keep multiple processes in main memory at once to increase CPU utilization (if one waits for I/O, CPU switches to another)."
+  },
+  {
+    "id": 106,
+    "category": "Fundamentals",
+    "q": "What is Multi-tasking?",
+    "a": "A logical extension of multiprogramming where the CPU switches between processes so frequently that users can interact with each program while it is running."
+  },
+  {
+    "id": 107,
+    "category": "Process Management",
+    "q": "What is the 'Long-term Scheduler'?",
+    "a": "The job scheduler that selects which processes should be brought into the 'Ready' queue from the pool."
+  },
+  {
+    "id": 108,
+    "category": "Process Management",
+    "q": "What is the 'Short-term Scheduler'?",
+    "a": "The CPU scheduler that selects which process from the 'Ready' queue should be executed next by the CPU."
+  },
+  {
+    "id": 109,
+    "category": "Memory Management",
+    "q": "What is Overlay?",
+    "a": "An old technique where a program is divided into parts that can be loaded into memory and replaced as needed, allowing a program larger than RAM to run."
+  },
+  {
+    "id": 110,
+    "category": "Memory Management",
+    "q": "What is the 'Copy-on-Write' (COW) mechanism?",
+    "a": "A strategy where parent and child processes share the same pages in memory until one of them modifies a page, at which point a copy is created."
+  },
+  {
+    "id": 111,
+    "category": "Synchronization",
+    "q": "What is the 'Readers-Writers' problem?",
+    "a": "A problem where multiple readers can access data at once, but only one writer can access it, and no readers can access it while a writer is writing."
+  },
+  {
+    "id": 112,
+    "category": "Deadlocks",
+    "q": "What is 'Safe State'?",
+    "a": "A state where there is at least one sequence of process execution that does not result in a deadlock."
+  },
+  {
+    "id": 113,
+    "category": "Deadlocks",
+    "q": "What is 'Livelock'?",
+    "a": "A situation where two or more processes continuously change their states in response to each other without making any progress."
+  },
+  {
+    "id": 114,
+    "category": "Storage Management",
+    "q": "What is a 'Bad Block'?",
+    "a": "A sector on a disk drive that cannot be used due to permanent damage."
+  },
+  {
+    "id": 115,
+    "category": "Storage Management",
+    "q": "What is 'Mounting' a file system?",
+    "a": "The process by which the OS makes a file system available for use at a specific location (mount point) in the directory tree."
+  },
+  {
+    "id": 116,
+    "category": "Security",
+    "q": "What is an Access Control List (ACL)?",
+    "a": "A list of permissions attached to an object (like a file) specifying which users or system processes are granted access."
+  },
+  {
+    "id": 117,
+    "category": "I/O Systems",
+    "q": "What is 'Cycle Stealing'?",
+    "a": "In DMA, when the DMA controller takes control of the system bus to transfer data, forcing the CPU to pause for a cycle."
+  },
+  {
+    "id": 118,
+    "category": "Advanced",
+    "q": "What is a Cloud OS?",
+    "a": "An OS designed to run in a cloud environment and manage cloud resources (e.g., Amazon Linux)."
+  },
+  {
+    "id": 119,
+    "category": "Fundamentals",
+    "q": "What is the purpose of a 'Watchdog Timer'?",
+    "a": "A hardware timer that triggers a system reset if the main program fails to regularly 'kick' or clear it, used to recover from crashes."
+  },
+  {
+    "id": 120,
+    "category": "Scenario",
+    "q": "If your computer is 'freezing', what is likely happening in terms of OS?",
+    "a": "It could be a Deadlock, Thrashing (excessive paging), or a Kernel Panic caused by a driver/hardware failure."
+  },
+  {
+    "id": 121,
+    "category": "Scenario",
+    "q": "Why would a 32-bit OS only support 4GB of RAM?",
+    "a": "A 32-bit register can only address 2^32 unique memory locations, which equals 4,294,967,296 bytes (4GB)."
+  },
+  {
+    "id": 122,
+    "category": "Memory Management",
+    "q": "What is a Frame Table?",
+    "a": "A data structure used by the OS to keep track of which physical frames are free and which are allocated to which pages."
+  },
+  {
+    "id": 123,
+    "category": "Advanced",
+    "q": "What is a 'System Call Interface'?",
+    "a": "The link between the system calls provided by the OS and the API used by application programs (e.g., POSIX, Win32)."
+  },
+  {
+    "id": 124,
+    "category": "Fundamentals",
+    "q": "What is a 'Signal' in Unix?",
+    "a": "An asynchronous notification sent to a process or to a specific thread within the same process in order to notify it of an event."
+  },
+  {
+    "id": 125,
+    "category": "Process Management",
+    "q": "What is 'Preemption'?",
+    "a": "The act of temporarily interrupting a task being carried out by a computer system, without requiring its cooperation, and with the intention of resuming the task later."
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "category": "Fundamentals",
+    "q": "What are the 7 layers of the OSI Model from Top to Bottom?",
+    "a": "Application, Presentation, Session, Transport, Network, Data Link, Physical. (Mnemonic: All People Seem To Need Data Processing)"
+  },
+  {
+    "id": 2,
+    "category": "Fundamentals",
+    "q": "What is the main difference between the OSI Model and the TCP/IP Model?",
+    "a": "OSI is a theoretical 7-layer model. TCP/IP is a practical 4-layer model (Application, Transport, Internet, Network Interface) used in real-world networking."
+  },
+  {
+    "id": 3,
+    "category": "Fundamentals",
+    "q": "What is a PDU (Protocol Data Unit) called at the Transport Layer?",
+    "a": "Segment (for TCP) or Datagram (for UDP)."
+  },
+  {
+    "id": 4,
+    "category": "Fundamentals",
+    "q": "What is a PDU called at the Network Layer?",
+    "a": "Packet."
+  },
+  {
+    "id": 5,
+    "category": "Fundamentals",
+    "q": "What is a PDU called at the Data Link Layer?",
+    "a": "Frame."
+  },
+  {
+    "id": 6,
+    "category": "Fundamentals",
+    "q": "Define Simplex, Half-Duplex, and Full-Duplex.",
+    "a": "Simplex: One-way only (e.g., Radio). Half-Duplex: Both ways, but one at a time (e.g., Walkie-Talkie). Full-Duplex: Both ways simultaneously (e.g., Telephone)."
+  },
+  {
+    "id": 7,
+    "category": "Data Link Layer",
+    "q": "What is a MAC Address?",
+    "a": "Media Access Control address. A unique 48-bit hardware identifier assigned to a network interface card (NIC) for communication on the physical network segment."
+  },
+  {
+    "id": 8,
+    "category": "Data Link Layer",
+    "q": "What is ARP?",
+    "a": "Address Resolution Protocol. It resolves a known IP address to a physical MAC address."
+  },
+  {
+    "id": 9,
+    "category": "Data Link Layer",
+    "q": "How does a Switch differ from a Hub?",
+    "a": "A Hub broadcasts data to all ports (Layer 1). A Switch intelligently forwards data only to the specific destination MAC address (Layer 2)."
+  },
+  {
+    "id": 10,
+    "category": "Data Link Layer",
+    "q": "What is a VLAN?",
+    "a": "Virtual LAN. It logically groups devices on different physical LANs into a single broadcast domain to improve security and performance."
+  },
+  {
+    "id": 11,
+    "category": "Network Layer",
+    "q": "What is the difference between IPv4 and IPv6?",
+    "a": "IPv4 uses 32-bit addresses (dotted decimal). IPv6 uses 128-bit addresses (hexadecimal) and provides a vastly larger address space."
+  },
+  {
+    "id": 12,
+    "category": "Network Layer",
+    "q": "What is a Subnet Mask?",
+    "a": "A 32-bit number that masks an IP address to separate the network address from the host address."
+  },
+  {
+    "id": 13,
+    "category": "Network Layer",
+    "q": "What is CIDR?",
+    "a": "Classless Inter-Domain Routing. A method for allocating IP addresses and IP routing that replaces the older class-based system (Class A, B, C)."
+  },
+  {
+    "id": 14,
+    "category": "Network Layer",
+    "q": "What is the Loopback Address?",
+    "a": "127.0.0.1 (IPv4) or ::1 (IPv6). Traffic sent to this address loops back to the sending machine; used for testing the network stack."
+  },
+  {
+    "id": 15,
+    "category": "Network Layer",
+    "q": "What is NAT?",
+    "a": "Network Address Translation. It allows a private network to share a single public IP address for accessing the internet."
+  },
+  {
+    "id": 16,
+    "category": "Network Layer",
+    "q": "What is ICMP used for?",
+    "a": "Internet Control Message Protocol. Used for diagnostics and error reporting (e.g., Ping, Destination Unreachable)."
+  },
+  {
+    "id": 17,
+    "category": "Network Layer",
+    "q": "What is TTL (Time to Live)?",
+    "a": "A field in an IP packet that prevents infinite loops. It is decremented by 1 at every router hop; the packet is discarded when TTL reaches 0."
+  },
+  {
+    "id": 18,
+    "category": "Network Layer",
+    "q": "Difference between Unicast, Multicast, and Broadcast.",
+    "a": "Unicast: One-to-one. Multicast: One-to-many (specific group). Broadcast: One-to-all (entire network)."
+  },
+  {
+    "id": 19,
+    "category": "Transport Layer",
+    "q": "What are the key differences between TCP and UDP?",
+    "a": "TCP is connection-oriented, reliable, ordered, and heavy. UDP is connectionless, unreliable, unordered, and lightweight."
+  },
+  {
+    "id": 20,
+    "category": "Transport Layer",
+    "q": "Explain the TCP Three-Way Handshake.",
+    "a": "1. Client sends SYN. 2. Server responds with SYN-ACK. 3. Client sends ACK. This establishes a reliable connection."
+  },
+  {
+    "id": 21,
+    "category": "Transport Layer",
+    "q": "What is Flow Control in TCP?",
+    "a": "A mechanism (like Sliding Window) to prevent the sender from overwhelming the receiver with too much data at once."
+  },
+  {
+    "id": 22,
+    "category": "Transport Layer",
+    "q": "What is Congestion Control in TCP?",
+    "a": "Algorithms (like Slow Start, Congestion Avoidance) to prevent the sender from overwhelming the network itself."
+  },
+  {
+    "id": 23,
+    "category": "Transport Layer",
+    "q": "What happens in the TCP Four-Way Termination?",
+    "a": "1. FIN from initiator. 2. ACK from receiver. 3. FIN from receiver. 4. ACK from initiator. (Connection closed)."
+  },
+  {
+    "id": 24,
+    "category": "Transport Layer",
+    "q": "What is a Socket?",
+    "a": "One endpoint of a two-way communication link between two programs running on the network, identified by an IP address and a Port number."
+  },
+  {
+    "id": 25,
+    "category": "Application Layer",
+    "q": "What is DHCP?",
+    "a": "Dynamic Host Configuration Protocol. Automatically assigns IP addresses and network configuration to devices (DORA process: Discover, Offer, Request, Acknowledge)."
+  },
+  {
+    "id": 26,
+    "category": "Application Layer",
+    "q": "What is DNS?",
+    "a": "Domain Name System. Translates human-readable domain names (example.com) into IP addresses (93.184.216.34)."
+  },
+  {
+    "id": 27,
+    "category": "Application Layer",
+    "q": "What is an 'A' Record in DNS?",
+    "a": "Maps a hostname to an IPv4 address."
+  },
+  {
+    "id": 28,
+    "category": "Application Layer",
+    "q": "What is a 'CNAME' Record in DNS?",
+    "a": "Canonical Name. Maps an alias domain name to another primary domain name."
+  },
+  {
+    "id": 29,
+    "category": "Application Layer",
+    "q": "Difference between HTTP and HTTPS.",
+    "a": "HTTPS is HTTP encrypted using TLS/SSL. HTTP sends data in plaintext (port 80), HTTPS sends encrypted data (port 443)."
+  },
+  {
+    "id": 30,
+    "category": "Application Layer",
+    "q": "List common HTTP methods.",
+    "a": "GET (retrieve), POST (submit), PUT (update/replace), PATCH (partial update), DELETE (remove), HEAD (headers only)."
+  },
+  {
+    "id": 31,
+    "category": "Application Layer",
+    "q": "What is the difference between PUT and PATCH?",
+    "a": "PUT replaces the entire resource. PATCH applies partial modifications to a resource."
+  },
+  {
+    "id": 32,
+    "category": "Application Layer",
+    "q": "What does Idempotent mean in HTTP?",
+    "a": "An operation is idempotent if making the same request multiple times produces the same result (e.g., GET, PUT, DELETE are idempotent; POST is not)."
+  },
+  {
+    "id": 33,
+    "category": "Application Layer",
+    "q": "HTTP Status Code 200 vs 201.",
+    "a": "200: OK (Request succeeded). 201: Created (Request succeeded and a new resource was created)."
+  },
+  {
+    "id": 34,
+    "category": "Application Layer",
+    "q": "HTTP Status Code 301 vs 302.",
+    "a": "301: Moved Permanently (SEO passes to new URL). 302: Found/Moved Temporarily."
+  },
+  {
+    "id": 35,
+    "category": "Application Layer",
+    "q": "HTTP Status Code 401 vs 403.",
+    "a": "401: Unauthorized (Authentication required). 403: Forbidden (Authenticated but not allowed)."
+  },
+  {
+    "id": 36,
+    "category": "Application Layer",
+    "q": "HTTP Status Code 500 vs 503.",
+    "a": "500: Internal Server Error (Server crashed/bug). 503: Service Unavailable (Overloaded or maintenance)."
+  },
+  {
+    "id": 37,
+    "category": "Application Layer",
+    "q": "What is a Cookie?",
+    "a": "A small piece of data stored on the client-side by the web browser, sent back to the server with every request to maintain state."
+  },
+  {
+    "id": 38,
+    "category": "Application Layer",
+    "q": "What is the purpose of the 'User-Agent' header?",
+    "a": "Identifies the client software (browser, OS, device) to the server."
+  },
+  {
+    "id": 39,
+    "category": "Protocols",
+    "q": "What is SMTP used for?",
+    "a": "Simple Mail Transfer Protocol. Used for SENDING emails between servers."
+  },
+  {
+    "id": 40,
+    "category": "Protocols",
+    "q": "What are POP3 and IMAP used for?",
+    "a": "Retrieving emails. POP3 downloads and deletes from server (usually). IMAP syncs with server (emails stay on server)."
+  },
+  {
+    "id": 41,
+    "category": "Protocols",
+    "q": "What is FTP? Which ports does it use?",
+    "a": "File Transfer Protocol. Uses Port 21 (Command) and Port 20 (Data)."
+  },
+  {
+    "id": 42,
+    "category": "Protocols",
+    "q": "What is SSH?",
+    "a": "Secure Shell. A protocol for secure remote login and other secure network services over an insecure network (Port 22)."
+  },
+  {
+    "id": 43,
+    "category": "Advanced",
+    "q": "What is the difference between a Forward Proxy and a Reverse Proxy?",
+    "a": "Forward Proxy acts on behalf of the client (anonymity). Reverse Proxy acts on behalf of the server (load balancing, caching, security)."
+  },
+  {
+    "id": 44,
+    "category": "Advanced",
+    "q": "What is a Load Balancer?",
+    "a": "A device or software that distributes network or application traffic across a number of servers to increase capacity and reliability."
+  },
+  {
+    "id": 45,
+    "category": "Advanced",
+    "q": "Explain Layer 4 vs Layer 7 Load Balancing.",
+    "a": "Layer 4 (Transport): Routes based on IP and Port. Layer 7 (Application): Routes based on content (URL, Headers, Cookies)."
+  },
+  {
+    "id": 46,
+    "category": "Advanced",
+    "q": "What is a CDN?",
+    "a": "Content Delivery Network. A network of distributed servers that deliver web content to users based on their geographic location."
+  },
+  {
+    "id": 47,
+    "category": "Advanced",
+    "q": "What is Anycast?",
+    "a": "A routing methodology where multiple servers share the same IP address, and the network routes the request to the topologically nearest one."
+  },
+  {
+    "id": 48,
+    "category": "Security",
+    "q": "What is a Firewall?",
+    "a": "A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+  },
+  {
+    "id": 49,
+    "category": "Security",
+    "q": "What is a DDoS attack?",
+    "a": "Distributed Denial of Service. Multiple compromised systems attack a target to flood it with traffic and make it unavailable."
+  },
+  {
+    "id": 50,
+    "category": "Security",
+    "q": "What is a VPN Tunnel?",
+    "a": "An encrypted connection over the internet between a device and a network, ensuring data privacy."
+  },
+  {
+    "id": 51,
+    "category": "Security",
+    "q": "Symmetric vs Asymmetric Encryption.",
+    "a": "Symmetric: Same key for encryption and decryption. Asymmetric: Public key to encrypt, Private key to decrypt."
+  },
+  {
+    "id": 52,
+    "category": "Security",
+    "q": "What is the TLS Handshake?",
+    "a": "The process where client and server exchange keys and establish a secure, encrypted session before sending data."
+  },
+  {
+    "id": 53,
+    "category": "Security",
+    "q": "What is a Man-in-the-Middle (MitM) Attack?",
+    "a": "An attacker secretly intercepts and possibly alters communications between two parties who believe they are communicating directly."
+  },
+  {
+    "id": 54,
+    "category": "Tools",
+    "q": "What does the 'ping' command do?",
+    "a": "Uses ICMP Echo Request/Reply to test reachability and measure round-trip time to a host."
+  },
+  {
+    "id": 55,
+    "category": "Tools",
+    "q": "What does 'traceroute' (or tracert) do?",
+    "a": "Shows the path (hops) packets take to a destination by manipulating the TTL field."
+  },
+  {
+    "id": 56,
+    "category": "Tools",
+    "q": "What is Wireshark used for?",
+    "a": "A network protocol analyzer used for capturing and inspecting packets in real-time."
+  },
+  {
+    "id": 57,
+    "category": "Tools",
+    "q": "What does 'netstat' show?",
+    "a": "Network Statistics. Displays active connections, routing tables, and interface stats."
+  },
+  {
+    "id": 58,
+    "category": "Scenario",
+    "q": "What happens when you type 'google.com' in a browser?",
+    "a": "1. DNS Lookup 2. TCP Handshake 3. HTTP/HTTPS Request 4. Server Response 5. Browser Rendering."
+  },
+  {
+    "id": 59,
+    "category": "Scenario",
+    "q": "Why would you choose UDP over TCP for a video game?",
+    "a": "Real-time games prefer speed over reliability. Dropped packets are better than delayed packets (lag)."
+  },
+  {
+    "id": 60,
+    "category": "Fundamentals",
+    "q": "What is the difference between Bandwidth and Latency?",
+    "a": "Bandwidth is the capacity (width of the pipe). Latency is the delay (time to travel the pipe)."
+  },
+  {
+    "id": 61,
+    "category": "Fundamentals",
+    "q": "What is Throughput?",
+    "a": "The actual rate of successful data transfer over a channel (often less than bandwidth due to errors/overhead)."
+  },
+  {
+    "id": 62,
+    "category": "Fundamentals",
+    "q": "What is Jitter?",
+    "a": "The variation in packet arrival time (latency). High jitter causes buffering in streaming."
+  },
+  {
+    "id": 63,
+    "category": "Data Link Layer",
+    "q": "What is CSMA/CD?",
+    "a": "Carrier Sense Multiple Access with Collision Detection. A method used in Ethernet to handle data collisions."
+  },
+  {
+    "id": 64,
+    "category": "Network Layer",
+    "q": "What is the Default Gateway?",
+    "a": "The router interface IP that a device sends traffic to when the destination is outside the local network."
+  },
+  {
+    "id": 65,
+    "category": "Network Layer",
+    "q": "What is MTU?",
+    "a": "Maximum Transmission Unit. The largest packet size that can be transmitted over a network interface (usually 1500 bytes for Ethernet)."
+  },
+  {
+    "id": 66,
+    "category": "Network Layer",
+    "q": "What is Fragmentation?",
+    "a": "Splitting a packet into smaller pieces if it exceeds the MTU of the network."
+  },
+  {
+    "id": 67,
+    "category": "Routing",
+    "q": "Difference between Static and Dynamic Routing.",
+    "a": "Static: Administrator manually defines paths. Dynamic: Routers exchange info (OSPF, BGP) to automatically find best paths."
+  },
+  {
+    "id": 68,
+    "category": "Routing",
+    "q": "What is OSPF?",
+    "a": "Open Shortest Path First. An Interior Gateway Protocol (IGP) using Link State algorithms."
+  },
+  {
+    "id": 69,
+    "category": "Routing",
+    "q": "What is BGP?",
+    "a": "Border Gateway Protocol. The Exterior Gateway Protocol (EGP) used to route traffic between different Autonomous Systems (AS) on the internet."
+  },
+  {
+    "id": 70,
+    "category": "Advanced",
+    "q": "What is an Autonomous System (AS)?",
+    "a": "A collection of connected IP routing prefixes under the control of one or more network operators (e.g., an ISP)."
+  },
+  {
+    "id": 71,
+    "category": "Advanced",
+    "q": "What is a WebSocket?",
+    "a": "A protocol providing full-duplex communication channels over a single TCP connection (persistent)."
+  },
+  {
+    "id": 72,
+    "category": "Advanced",
+    "q": "WebSockets vs Long Polling.",
+    "a": "WebSockets: True two-way persistent connection. Long Polling: Client requests, server holds until data is available, then closes. Client re-requests."
+  },
+  {
+    "id": 73,
+    "category": "Advanced",
+    "q": "What is SSE (Server-Sent Events)?",
+    "a": "A standard allowing servers to push data to web pages over HTTP (One-way: Server -> Client)."
+  },
+  {
+    "id": 74,
+    "category": "Application Layer",
+    "q": "What is Keep-Alive in HTTP?",
+    "a": "Allows the same TCP connection to remain open for multiple HTTP requests, reducing latency."
+  },
+  {
+    "id": 75,
+    "category": "Security",
+    "q": "What is CORS?",
+    "a": "Cross-Origin Resource Sharing. A mechanism allowing resources on a web page to be requested from another domain."
+  },
+  {
+    "id": 76,
+    "category": "Security",
+    "q": "What is XSS (Cross-Site Scripting)?",
+    "a": "An attack where malicious scripts are injected into trusted websites."
+  },
+  {
+    "id": 77,
+    "category": "Security",
+    "q": "What is SQL Injection?",
+    "a": "An attack where malicious SQL statements are inserted into entry fields for execution (e.g., dumping the database)."
+  },
+  {
+    "id": 78,
+    "category": "Advanced",
+    "q": "What is Consistent Hashing?",
+    "a": "A hashing technique used in distributed systems/load balancing to minimize reorganization when nodes are added or removed."
+  },
+  {
+    "id": 79,
+    "category": "Advanced",
+    "q": "What is the CAP Theorem?",
+    "a": "In a distributed system, you can only pick 2: Consistency, Availability, Partition Tolerance."
+  },
+  {
+    "id": 80,
+    "category": "Transport Layer",
+    "q": "What is the sliding window protocol?",
+    "a": "A flow control protocol where the sender can send multiple frames before waiting for an acknowledgment."
+  },
+  {
+    "id": 81,
+    "category": "Network Layer",
+    "q": "Class A IP Range.",
+    "a": "1.0.0.0 to 126.0.0.0. (First bit is 0)."
+  },
+  {
+    "id": 82,
+    "category": "Network Layer",
+    "q": "Class B IP Range.",
+    "a": "128.0.0.0 to 191.255.0.0. (First two bits 10)."
+  },
+  {
+    "id": 83,
+    "category": "Network Layer",
+    "q": "Class C IP Range.",
+    "a": "192.0.0.0 to 223.255.255.0. (First three bits 110)."
+  },
+  {
+    "id": 84,
+    "category": "Tools",
+    "q": "What is 'nslookup'?",
+    "a": "Name Server Lookup. A tool to query DNS servers to find IP addresses or other DNS records."
+  },
+  {
+    "id": 85,
+    "category": "Tools",
+    "q": "What is 'curl'?",
+    "a": "Client URL. A command-line tool for transferring data using various network protocols (HTTP, FTP, etc.)."
+  },
+  {
+    "id": 86,
+    "category": "Fundamentals",
+    "q": "What is a Star Topology?",
+    "a": "All nodes connect independently to a central hub or switch. If the central device fails, the network fails."
+  },
+  {
+    "id": 87,
+    "category": "Fundamentals",
+    "q": "What is a Mesh Topology?",
+    "a": "Every node is connected to every other node (Full Mesh). Expensive but highest redundancy."
+  },
+  {
+    "id": 88,
+    "category": "Hardware",
+    "q": "What is a NIC?",
+    "a": "Network Interface Card. Hardware that allows a computer to connect to a network."
+  },
+  {
+    "id": 89,
+    "category": "Application Layer",
+    "q": "What is the purpose of MIME types?",
+    "a": "Multipurpose Internet Mail Extensions. It indicates the nature and format of a document/file (e.g., text/html, application/json)."
+  },
+  {
+    "id": 90,
+    "category": "Advanced",
+    "q": "What is HTTP/2?",
+    "a": "A major revision of HTTP. It adds Multiplexing (multiple requests over one connection), Header Compression, and Server Push."
+  },
+  {
+    "id": 91,
+    "category": "Advanced",
+    "q": "What is HTTP/3?",
+    "a": "The next generation of HTTP, based on the QUIC protocol (over UDP), designed to reduce latency and solve head-of-line blocking."
+  },
+  {
+    "id": 92,
+    "category": "Network Layer",
+    "q": "What is IP Spoofing?",
+    "a": "Creating IP packets with a false source IP address to hide the sender's identity or impersonate another system."
+  },
+  {
+    "id": 93,
+    "category": "Transport Layer",
+    "q": "What is a SYN Flood?",
+    "a": "A DDoS attack where attackers send a flood of SYN requests to consume server resources, rendering it unresponsive."
+  },
+  {
+    "id": 94,
+    "category": "Network Layer",
+    "q": "What is a Private IP Address?",
+    "a": "IP addresses reserved for internal use (LANs) and not routable on the public internet (e.g., 192.168.x.x)."
+  },
+  {
+    "id": 95,
+    "category": "Network Layer",
+    "q": "What is APIPA?",
+    "a": "Automatic Private IP Addressing. Windows assigns a 169.254.x.x address when a DHCP server is unavailable."
+  },
+  {
+    "id": 96,
+    "category": "Fundamentals",
+    "q": "What is 'Encapsulation' in networking?",
+    "a": "The process of wrapping data with protocol headers/trailers as it moves down the OSI layers."
+  },
+  {
+    "id": 97,
+    "category": "Fundamentals",
+    "q": "What is 'Decapsulation'?",
+    "a": "The process of removing headers/trailers as data moves up the OSI layers at the receiver."
+  },
+  {
+    "id": 98,
+    "category": "Routing",
+    "q": "What is a Hop Count?",
+    "a": "The number of routers a packet must pass through to reach its destination."
+  },
+  {
+    "id": 99,
+    "category": "Routing",
+    "q": "What is Convergence in routing?",
+    "a": "The state where all routers in a network agree on the optimal paths to all destinations."
+  },
+  {
+    "id": 100,
+    "category": "Security",
+    "q": "What is IPSec?",
+    "a": "Internet Protocol Security. A suite of protocols to secure IP communications by authenticating and encrypting each IP packet."
+  },
+  {
+    "id": 101,
+    "category": "Application Layer",
+    "q": "What is a URL?",
+    "a": "Uniform Resource Locator. A reference to a web resource that specifies its location and the mechanism to retrieve it."
+  },
+  {
+    "id": 102,
+    "category": "Advanced",
+    "q": "What is Rate Limiting?",
+    "a": "Controlling the rate of traffic sent or received by a network interface or application to prevent abuse."
+  },
+  {
+    "id": 103,
+    "category": "Advanced",
+    "q": "What is a Sticky Session?",
+    "a": "A load balancing technique where a user's session is bound to a specific server for the duration of the session."
+  },
+  {
+    "id": 104,
+    "category": "Hardware",
+    "q": "What is a Repeater?",
+    "a": "A Layer 1 device that regenerates and retransmits signals to extend the range of a network."
+  },
+  {
+    "id": 105,
+    "category": "Hardware",
+    "q": "What is a Bridge?",
+    "a": "A Layer 2 device that connects two network segments and filters traffic based on MAC addresses."
+  },
+  {
+    "id": 106,
+    "category": "Tools",
+    "q": "What is Port Forwarding?",
+    "a": "Redirecting communication requests from one address and port number to another while packets are traversing a network gateway."
+  },
+  {
+    "id": 107,
+    "category": "Advanced",
+    "q": "What is Geo-DNS?",
+    "a": "A DNS service that directs traffic to different IP addresses based on the geographic location of the client."
+  },
+  {
+    "id": 108,
+    "category": "Application Layer",
+    "q": "What is Telnet?",
+    "a": "An old network protocol for bidirectional text communication. Insecure because it sends data in plaintext."
+  },
+  {
+    "id": 109,
+    "category": "Security",
+    "q": "What is a Digital Certificate?",
+    "a": "An electronic document used to prove the ownership of a public key (used in SSL/TLS)."
+  },
+  {
+    "id": 110,
+    "category": "Security",
+    "q": "What is Two-Factor Authentication (2FA)?",
+    "a": "A security process requiring two different forms of identification (e.g., password + SMS code)."
+  },
+  {
+    "id": 111,
+    "category": "Advanced",
+    "q": "What is RPC?",
+    "a": "Remote Procedure Call. A protocol that allows a program to execute a procedure on another computer as if it were local."
+  },
+  {
+    "id": 112,
+    "category": "Advanced",
+    "q": "REST vs SOAP.",
+    "a": "REST: Architectural style, lightweight, uses JSON/XML, stateless. SOAP: Protocol, heavy, uses XML, strict standards."
+  },
+  {
+    "id": 113,
+    "category": "Scenario",
+    "q": "How do you troubleshoot a 'Connection Refused' error?",
+    "a": "Check if the server application is running, check if it's listening on the correct port, and check firewall rules."
+  },
+  {
+    "id": 114,
+    "category": "Scenario",
+    "q": "How do you troubleshoot high latency?",
+    "a": "Use ping/traceroute to find bottlenecks, check bandwidth usage, check for packet loss, and inspect server load."
+  },
+  {
+    "id": 115,
+    "category": "Advanced",
+    "q": "What is Head-of-Line Blocking?",
+    "a": "A performance issue where a line of packets is held up by the processing of the first packet."
+  },
+  {
+    "id": 116,
+    "category": "Security",
+    "q": "What is a Salt in password hashing?",
+    "a": "Random data added to a password before hashing to protect against dictionary attacks and rainbow tables."
+  },
+  {
+    "id": 117,
+    "category": "Application Layer",
+    "q": "What is an MX Record?",
+    "a": "Mail Exchange record. Specifies the mail server responsible for accepting email on behalf of a domain."
+  },
+  {
+    "id": 118,
+    "category": "Application Layer",
+    "q": "What is an SOA Record?",
+    "a": "Start of Authority. Contains administrative information about the zone (serial number, admin email, refresh rates)."
+  },
+  {
+    "id": 119,
+    "category": "Advanced",
+    "q": "What is Microservices Architecture?",
+    "a": "Structuring an application as a collection of loosely coupled services, often communicating over HTTP/REST."
+  },
+  {
+    "id": 120,
+    "category": "Advanced",
+    "q": "What is Service Discovery?",
+    "a": "The process of automatically detecting devices and services on a computer network."
+  },
+  {
+    "id": 121,
+    "category": "Network Layer",
+    "q": "What is a Broadcast Domain?",
+    "a": "A logical division of a computer network where all nodes can reach each other by broadcast at the data link layer."
+  },
+  {
+    "id": 122,
+    "category": "Network Layer",
+    "q": "What is a Collision Domain?",
+    "a": "A network segment where data packets can collide with one another when being sent (common in Hubs)."
+  },
+  {
+    "id": 123,
+    "category": "Advanced",
+    "q": "What is the Nagle Algorithm?",
+    "a": "A means of improving the efficiency of TCP/IP networks by reducing the number of packets that need to be sent (combining small packets)."
+  },
+  {
+    "id": 124,
+    "category": "Advanced",
+    "q": "What is TCP Fast Open?",
+    "a": "An extension to enable data exchange during the initial TCP SYN handshake to reduce latency."
+  },
+  {
+    "id": 125,
+    "category": "Scenario",
+    "q": "If a server is returning 504 Gateway Timeout, where is the issue likely located?",
+    "a": "The issue is likely with an upstream server (the backend) taking too long to respond to the proxy/gateway."
+  }
+]

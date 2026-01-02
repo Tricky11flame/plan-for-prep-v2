@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "category": "Fundamentals",
+    "q": "What is Scalability?",
+    "a": "The ability of a system to handle an increased load by adding resources."
+  },
+  {
+    "id": 2,
+    "category": "Fundamentals",
+    "q": "Vertical vs Horizontal Scaling.",
+    "a": "Vertical: Adding more power (CPU/RAM) to a single machine. Horizontal: Adding more machines to the resource pool."
+  },
+  {
+    "id": 3,
+    "category": "Fundamentals",
+    "q": "What is Throughput?",
+    "a": "The number of units of information a system can process in a given amount of time."
+  },
+  {
+    "id": 4,
+    "category": "Fundamentals",
+    "q": "What is Latency?",
+    "a": "The time it takes for a single unit of data to move across a network or for a system to respond to a request."
+  },
+  {
+    "id": 5,
+    "category": "Fundamentals",
+    "q": "High Availability vs Reliability.",
+    "a": "Availability: Percentage of time the system is operational. Reliability: Probability that the system performs its function without failure for a specific time."
+  },
+  {
+    "id": 6,
+    "category": "Fundamentals",
+    "q": "What is a Single Point of Failure (SPOF)?",
+    "a": "A component in a system which, if it fails, stops the entire system from working."
+  },
+  {
+    "id": 7,
+    "category": "Load Balancing",
+    "q": "What is a Load Balancer?",
+    "a": "A component that distributes incoming network traffic across multiple servers to ensure no single server bears too much load."
+  },
+  {
+    "id": 8,
+    "category": "Load Balancing",
+    "q": "Layer 4 vs Layer 7 Load Balancing.",
+    "a": "Layer 4: Operates at the transport level (IP/Port). Layer 7: Operates at the application level (HTTP headers, cookies, URL)."
+  },
+  {
+    "id": 9,
+    "category": "Load Balancing",
+    "q": "Explain Round Robin Load Balancing.",
+    "a": "Requests are distributed sequentially to the list of servers in a rotating fashion."
+  },
+  {
+    "id": 10,
+    "category": "Load Balancing",
+    "q": "What is Least Connections algorithm?",
+    "a": "Directs traffic to the server with the fewest active connections at that moment."
+  },
+  {
+    "id": 11,
+    "category": "Load Balancing",
+    "q": "What are Sticky Sessions?",
+    "a": "A mechanism where a load balancer routes all requests from a specific client to the same physical server for the duration of a session."
+  },
+  {
+    "id": 12,
+    "category": "Caching",
+    "q": "What is Caching?",
+    "a": "Storing copies of data in a high-speed storage layer to serve future requests faster."
+  },
+  {
+    "id": 13,
+    "category": "Caching",
+    "q": "What is the Cache Hit Ratio?",
+    "a": "The fraction of attempts to read from the cache that result in finding the data."
+  },
+  {
+    "id": 14,
+    "category": "Caching",
+    "q": "Explain Write-through Cache.",
+    "a": "Data is written into the cache and the corresponding database simultaneously."
+  },
+  {
+    "id": 15,
+    "category": "Caching",
+    "q": "Explain Write-around Cache.",
+    "a": "Data is written directly to the permanent storage, bypassing the cache."
+  },
+  {
+    "id": 16,
+    "category": "Caching",
+    "q": "Explain Write-back Cache.",
+    "a": "Data is written to the cache alone, and the permanent storage is updated after a specific interval or under certain conditions."
+  },
+  {
+    "id": 17,
+    "category": "Caching",
+    "q": "What is Cache Eviction?",
+    "a": "The process of removing items from the cache to make room for new data."
+  },
+  {
+    "id": 18,
+    "category": "Caching",
+    "q": "Explain LRU (Least Recently Used) policy.",
+    "a": "Discards the least recently accessed items first."
+  },
+  {
+    "id": 19,
+    "category": "Caching",
+    "q": "What is a CDN (Content Delivery Network)?",
+    "a": "A distributed network of proxy servers and data centers used to deliver content based on the user's geographic location."
+  },
+  {
+    "id": 20,
+    "category": "Databases",
+    "q": "What is Database Sharding?",
+    "a": "A type of horizontal partitioning that splits a large database into smaller, faster, and more easily managed parts called shards."
+  },
+  {
+    "id": 21,
+    "category": "Databases",
+    "q": "What is Replication?",
+    "a": "The process of sharing information so as to ensure consistency between redundant resources (like multiple database instances)."
+  },
+  {
+    "id": 22,
+    "category": "Databases",
+    "q": "Leader-Follower (Master-Slave) Replication.",
+    "a": "The Leader handles writes and replicates data to Followers, which handle read requests."
+  },
+  {
+    "id": 23,
+    "category": "Databases",
+    "q": "Multi-Leader Replication.",
+    "a": "Multiple nodes can accept writes, and they replicate those changes to each other; useful for multi-datacenter setups."
+  },
+  {
+    "id": 24,
+    "category": "Databases",
+    "q": "Explain the CAP Theorem.",
+    "a": "In a distributed data store, you can only provide two of three guarantees: Consistency, Availability, and Partition Tolerance."
+  },
+  {
+    "id": 25,
+    "category": "Databases",
+    "q": "Consistency in CAP vs Consistency in ACID.",
+    "a": "CAP: Every read receives the most recent write. ACID: A transaction takes the database from one valid state to another."
+  },
+  {
+    "id": 26,
+    "category": "Databases",
+    "q": "What is PACELC Theorem?",
+    "a": "An extension of CAP. If there is a Partition (P), trade off Availability (A) vs Consistency (C); Else (E), trade off Latency (L) vs Consistency (C)."
+  },
+  {
+    "id": 27,
+    "category": "Databases",
+    "q": "What is Eventual Consistency?",
+    "a": "A consistency model used in distributed computing that guarantees that, if no new updates are made to a data item, eventually all accesses to that item will return the last updated value."
+  },
+  {
+    "id": 28,
+    "category": "Databases",
+    "q": "What is Strong Consistency?",
+    "a": "Guarantees that once a write is acknowledged, any subsequent read will return that value."
+  },
+  {
+    "id": 29,
+    "category": "Databases",
+    "q": "Relational (RDBMS) vs Non-Relational (NoSQL).",
+    "a": "RDBMS: Structured, schema-fixed, ACID compliant. NoSQL: Flexible schema, horizontally scalable, often BASE compliant."
+  },
+  {
+    "id": 30,
+    "category": "Distributed Systems",
+    "q": "What is Consistent Hashing?",
+    "a": "A technique to distribute keys across a cluster of nodes such that adding or removing a node only requires remapping a small fraction of keys."
+  },
+  {
+    "id": 31,
+    "category": "Distributed Systems",
+    "q": "What is a Gossip Protocol?",
+    "a": "A decentralized communication procedure where nodes periodically exchange information with a few random neighbors to achieve eventual state synchronization."
+  },
+  {
+    "id": 32,
+    "category": "Distributed Systems",
+    "q": "What is the Quorum in distributed systems?",
+    "a": "The minimum number of votes that a distributed transaction must obtain to be allowed to perform an operation."
+  },
+  {
+    "id": 33,
+    "category": "Distributed Systems",
+    "q": "What is a Heartbeat mechanism?",
+    "a": "Periodic signals sent by hardware or software to indicate it is still active and healthy."
+  },
+  {
+    "id": 34,
+    "category": "Messaging",
+    "q": "Synchronous vs Asynchronous Communication.",
+    "a": "Synchronous: Sender waits for receiver to respond. Asynchronous: Sender continues execution without waiting for an immediate response."
+  },
+  {
+    "id": 35,
+    "category": "Messaging",
+    "q": "What is a Message Queue?",
+    "a": "A form of asynchronous service-to-service communication used in serverless and microservices architectures."
+  },
+  {
+    "id": 36,
+    "category": "Messaging",
+    "q": "What is Pub/Sub (Publisher/Subscriber)?",
+    "a": "A messaging pattern where senders (publishers) do not send messages directly to specific receivers (subscribers), but characterize messages into classes/topics."
+  },
+  {
+    "id": 37,
+    "category": "Messaging",
+    "q": "At-most-once vs At-least-once vs Exactly-once Delivery.",
+    "a": "At-most-once: No retries, messages may be lost. At-least-once: Retries ensure delivery, but may cause duplicates. Exactly-once: Complex orchestration ensures no loss and no duplicates."
+  },
+  {
+    "id": 38,
+    "category": "Microservices",
+    "q": "What is Microservices Architecture?",
+    "a": "An architectural style that structures an application as a collection of small, autonomous services modeled around a business domain."
+  },
+  {
+    "id": 39,
+    "category": "Microservices",
+    "q": "What is an API Gateway?",
+    "a": "A server that acts as an entry point into a system, providing routing, composition, and policy enforcement (like auth and rate limiting)."
+  },
+  {
+    "id": 40,
+    "category": "Microservices",
+    "q": "What is Service Discovery?",
+    "a": "The process of automatically detecting devices and services on a network so they can interact with each other."
+  },
+  {
+    "id": 41,
+    "category": "Microservices",
+    "q": "Explain the Circuit Breaker pattern.",
+    "a": "A design pattern used to detect failures and encapsulate logic of preventing a failure from constantly recurring during maintenance or temporary external outages."
+  },
+  {
+    "id": 42,
+    "category": "Microservices",
+    "q": "What is Distributed Tracing?",
+    "a": "Method used to profile and monitor applications, especially those built using a microservices architecture, by tracking requests as they flow through various services."
+  },
+  {
+    "id": 43,
+    "category": "Microservices",
+    "q": "What is a Sidecar Pattern?",
+    "a": "Deploying components of an application into a separate process or container to provide isolation and encapsulation (e.g., logging or proxying)."
+  },
+  {
+    "id": 44,
+    "category": "Security",
+    "q": "What is Rate Limiting?",
+    "a": "Limiting the number of requests a user or client can make to a system within a given timeframe."
+  },
+  {
+    "id": 45,
+    "category": "Security",
+    "q": "Token Bucket vs Leaky Bucket algorithms.",
+    "a": "Token Bucket: Allows bursts of traffic up to bucket capacity. Leaky Bucket: Smooths out bursts by processing requests at a constant rate."
+  },
+  {
+    "id": 46,
+    "category": "Security",
+    "q": "What is Idempotency?",
+    "a": "The property of certain operations in which they can be applied multiple times without changing the result beyond the initial application."
+  },
+  {
+    "id": 47,
+    "category": "Storage",
+    "q": "Object Storage vs Block Storage.",
+    "a": "Object: Data managed as objects with metadata (e.g., S3). Block: Data stored in fixed-size blocks, usually for database storage."
+  },
+  {
+    "id": 48,
+    "category": "Performance",
+    "q": "What is the N+1 Query Problem?",
+    "a": "A performance issue where an application makes one query to fetch N parent records, then N additional queries to fetch child records for each parent."
+  },
+  {
+    "id": 49,
+    "category": "Performance",
+    "q": "What is a Proxy Server?",
+    "a": "An intermediate server that acts as a gateway between a client and a destination server."
+  },
+  {
+    "id": 50,
+    "category": "Performance",
+    "q": "Forward Proxy vs Reverse Proxy.",
+    "a": "Forward: Protects clients (outbound). Reverse: Protects and balances servers (inbound)."
+  },
+  {
+    "id": 51,
+    "category": "Architecture Patterns",
+    "q": "What is CQRS?",
+    "a": "Command Query Responsibility Segregation. A pattern that separates read and update operations for a data store."
+  },
+  {
+    "id": 52,
+    "category": "Architecture Patterns",
+    "q": "What is Event Sourcing?",
+    "a": "A pattern where state changes are stored as a sequence of events rather than just the current state."
+  },
+  {
+    "id": 53,
+    "category": "Architecture Patterns",
+    "q": "Explain the Saga Pattern.",
+    "a": "A sequence of local transactions where each transaction updates data within a single service and triggers the next transaction."
+  },
+  {
+    "id": 54,
+    "category": "Architecture Patterns",
+    "q": "What is a Tiered Architecture?",
+    "a": "Organizing a system into logical layers (e.g., Presentation, Application, Data) to separate concerns."
+  },
+  {
+    "id": 55,
+    "category": "Fundamentals",
+    "q": "What is Over-provisioning?",
+    "a": "Allocating more resources than are currently needed to handle potential spikes in load."
+  },
+  {
+    "id": 56,
+    "category": "Fundamentals",
+    "q": "What is Under-provisioning?",
+    "a": "Allocating fewer resources than required, leading to performance degradation or downtime."
+  },
+  {
+    "id": 57,
+    "category": "Distributed Systems",
+    "q": "What is the Consensus Problem?",
+    "a": "The process of getting multiple nodes in a distributed system to agree on a single data value or state."
+  },
+  {
+    "id": 58,
+    "category": "Distributed Systems",
+    "q": "Explain Paxos or Raft.",
+    "a": "Consensus algorithms designed to manage a replicated log in a distributed system to ensure state machine consistency."
+  },
+  {
+    "id": 59,
+    "category": "Databases",
+    "q": "What is a Wide Column Store?",
+    "a": "A NoSQL database that uses tables, rows, and columns, but the names and formats of columns can vary from row to row (e.g., Cassandra)."
+  },
+  {
+    "id": 60,
+    "category": "Databases",
+    "q": "What is a Graph Database?",
+    "a": "A database that uses graph structures for semantic queries with nodes, edges, and properties (e.g., Neo4j)."
+  },
+  {
+    "id": 61,
+    "category": "Caching",
+    "q": "What is Cache Stampede?",
+    "a": "A failure where multiple threads/processes try to regenerate a cache value simultaneously when it expires."
+  },
+  {
+    "id": 62,
+    "category": "Caching",
+    "q": "What is Cache Warming?",
+    "a": "Pre-populating the cache with data before it is requested by users to avoid initial latency."
+  },
+  {
+    "id": 63,
+    "category": "Fundamentals",
+    "q": "What is the Back-of-the-envelope estimation?",
+    "a": "A rough calculation used to estimate system requirements like storage, bandwidth, and memory before deep design."
+  },
+  {
+    "id": 64,
+    "category": "Load Balancing",
+    "q": "What is DNS Load Balancing?",
+    "a": "Configuring a domain in the DNS such that client requests are distributed across several server IP addresses."
+  },
+  {
+    "id": 65,
+    "category": "Messaging",
+    "q": "What is a Dead Letter Queue (DLQ)?",
+    "a": "A service implementation to store messages that cannot be processed successfully by a consumer."
+  },
+  {
+    "id": 66,
+    "category": "Distributed Systems",
+    "q": "What is Clock Skew?",
+    "a": "The difference in time between the internal clocks of two different machines in a network."
+  },
+  {
+    "id": 67,
+    "category": "Distributed Systems",
+    "q": "What is Vector Clock?",
+    "a": "A mechanism for capturing the partial ordering of events in a distributed system and detecting causality violations."
+  },
+  {
+    "id": 68,
+    "category": "Fundamentals",
+    "q": "What are the 'Five Nines'?",
+    "a": "99.999% availability, which equates to roughly 5.26 minutes of downtime per year."
+  },
+  {
+    "id": 69,
+    "category": "Security",
+    "q": "What is JWT (JSON Web Token)?",
+    "a": "A compact, URL-safe means of representing claims to be transferred between two parties, often used for stateless authentication."
+  },
+  {
+    "id": 70,
+    "category": "Security",
+    "q": "OAuth2 vs OpenID Connect (OIDC).",
+    "a": "OAuth2 is for Authorization (accessing resources). OIDC is a layer on top of OAuth2 for Authentication (verifying identity)."
+  },
+  {
+    "id": 71,
+    "category": "Storage",
+    "q": "What is Hot vs Cold Storage?",
+    "a": "Hot: High-speed access for frequently used data. Cold: Low-cost, high-latency storage for archival data."
+  },
+  {
+    "id": 72,
+    "category": "Architecture Patterns",
+    "q": "What is Serverless Architecture?",
+    "a": "A way to build and run applications without managing infrastructure; the cloud provider automatically manages the resources."
+  },
+  {
+    "id": 73,
+    "category": "Microservices",
+    "q": "What is a Service Mesh?",
+    "a": "A dedicated infrastructure layer for handling service-to-service communication, often using sidecar proxies (e.g., Istio)."
+  },
+  {
+    "id": 74,
+    "category": "Fundamentals",
+    "q": "What is 'Stateful' vs 'Stateless'?",
+    "a": "Stateless: Server does not store client data between requests. Stateful: Server maintains state/session info for each client."
+  },
+  {
+    "id": 75,
+    "category": "Performance",
+    "q": "What is Database Connection Pooling?",
+    "a": "Maintaining a cache of database connections so that connections can be reused for future requests."
+  },
+  {
+    "id": 76,
+    "category": "Architecture Patterns",
+    "q": "What is a Lambda Architecture?",
+    "a": "A data-processing architecture designed to handle massive quantities of data by taking advantage of both batch and stream-processing methods."
+  },
+  {
+    "id": 77,
+    "category": "Performance",
+    "q": "What is the 'Long Tail' of latency?",
+    "a": "The small percentage of requests (high percentiles like p99 or p99.9) that take much longer than the average response time."
+  },
+  {
+    "id": 78,
+    "category": "Databases",
+    "q": "What is Read-your-writes consistency?",
+    "a": "A guarantee that a system will allow a user to see their own updates immediately after they have been submitted."
+  },
+  {
+    "id": 79,
+    "category": "Distributed Systems",
+    "q": "What is the Split-Brain problem?",
+    "a": "When a cluster divides into two or more independent groups that each believe they are the only active group, leading to data corruption."
+  },
+  {
+    "id": 80,
+    "category": "Fundamentals",
+    "q": "What is 'Elasticity'?",
+    "a": "The degree to which a system is able to adapt to workload changes by provisioning and de-provisioning resources in an autonomic manner."
+  },
+  {
+    "id": 81,
+    "category": "Caching",
+    "q": "What is a Local Cache vs Global Cache?",
+    "a": "Local: Stored on the application server. Global: External centralized cache (e.g., Redis) shared by all application servers."
+  },
+  {
+    "id": 82,
+    "category": "Load Balancing",
+    "q": "What is Weighted Round Robin?",
+    "a": "Servers with higher capacities are assigned higher weights and receive more requests than servers with lower weights."
+  },
+  {
+    "id": 83,
+    "category": "Messaging",
+    "q": "What is Poison Message?",
+    "a": "A message that a consumer cannot process and causes it to fail repeatedly."
+  },
+  {
+    "id": 84,
+    "category": "Microservices",
+    "q": "What is the Backend-for-Frontend (BFF) pattern?",
+    "a": "Creating a dedicated backend service for each specific frontend/client type (e.g., Mobile BFF, Web BFF)."
+  },
+  {
+    "id": 85,
+    "category": "Storage",
+    "q": "What is a Write-Ahead Log (WAL)?",
+    "a": "A technique where changes are first recorded in a log on stable storage before being applied to the actual database."
+  },
+  {
+    "id": 86,
+    "category": "Distributed Systems",
+    "q": "What is an Idempotency Key?",
+    "a": "A unique value generated by the client which the server uses to recognize subsequent retries of the same request."
+  },
+  {
+    "id": 87,
+    "category": "Databases",
+    "q": "What is Multi-version Concurrency Control (MVCC)?",
+    "a": "A method used by databases to provide concurrent access to data without locking, by maintaining multiple versions of data items."
+  },
+  {
+    "id": 88,
+    "category": "Architecture Patterns",
+    "q": "What is a 'Shared-Nothing' Architecture?",
+    "a": "A distributed computing architecture in which each update request is satisfied by a single node (processor/memory/storage)."
+  },
+  {
+    "id": 89,
+    "category": "Messaging",
+    "q": "What is Message Durability?",
+    "a": "The property ensuring that messages are not lost if the messaging system or the receiver crashes."
+  },
+  {
+    "id": 90,
+    "category": "Security",
+    "q": "What is mTLS (Mutual TLS)?",
+    "a": "A security process in which both the client and server verify each other's certificates before establishing a connection."
+  },
+  {
+    "id": 91,
+    "category": "Fundamentals",
+    "q": "What is Blue-Green Deployment?",
+    "a": "A technique that reduces downtime and risk by running two identical production environments, only one of which serves live traffic at any time."
+  },
+  {
+    "id": 92,
+    "category": "Fundamentals",
+    "q": "What is Canary Deployment?",
+    "a": "Rolling out a new feature or version to a small subset of users first before making it available to everyone."
+  },
+  {
+    "id": 93,
+    "category": "Performance",
+    "q": "What is Data Compression?",
+    "a": "Reducing the size of data to save storage space or transmission time, often at the cost of CPU cycles for encoding/decoding."
+  },
+  {
+    "id": 94,
+    "category": "Microservices",
+    "q": "What is Database-per-service pattern?",
+    "a": "Ensuring each microservice has its own private database to maintain loose coupling and independence."
+  },
+  {
+    "id": 95,
+    "category": "Databases",
+    "q": "What is a Foreign Key constraint in distributed DBs?",
+    "a": "Often avoided or difficult to enforce across shards/nodes; usually managed at the application level."
+  },
+  {
+    "id": 96,
+    "category": "Distributed Systems",
+    "q": "What is Two-Phase Commit (2PC)?",
+    "a": "A distributed algorithm used to coordinate all processes that participate in a distributed atomic transaction on whether to commit or abort."
+  },
+  {
+    "id": 97,
+    "category": "Distributed Systems",
+    "q": "Three-Phase Commit (3PC) vs 2PC.",
+    "a": "3PC adds a 'prepared to commit' stage to eliminate the blocking problem found in 2PC during coordinator failure."
+  },
+  {
+    "id": 98,
+    "category": "Architecture Patterns",
+    "q": "What is the Strangler Fig pattern?",
+    "a": "A method for migrating a legacy system by incrementally replacing specific pieces of functionality with new services."
+  },
+  {
+    "id": 99,
+    "category": "Fundamentals",
+    "q": "What is 'Graceful Degradation'?",
+    "a": "The ability of a system to maintain limited functionality even when some of its components have failed."
+  },
+  {
+    "id": 100,
+    "category": "Fundamentals",
+    "q": "What is Blast Radius?",
+    "a": "The maximum impact of a failed component or an incorrect configuration change."
+  },
+  {
+    "id": 101,
+    "category": "Networking",
+    "q": "What is Anycast routing?",
+    "a": "A network addressing and routing method in which incoming requests can be routed to a variety of different nodes, but always to the 'nearest' one."
+  },
+  {
+    "id": 102,
+    "category": "Networking",
+    "q": "What is BGP (Border Gateway Protocol)?",
+    "a": "The protocol used to exchange routing and reachability information between autonomous systems on the internet."
+  },
+  {
+    "id": 103,
+    "category": "Monitoring",
+    "q": "Metrics vs Logs vs Traces.",
+    "a": "Metrics: Aggregated numerical data. Logs: Discrete events. Traces: End-to-end request flow."
+  },
+  {
+    "id": 104,
+    "category": "Monitoring",
+    "q": "What is a Health Check?",
+    "a": "An endpoint or mechanism used to determine if a service instance is capable of handling requests."
+  },
+  {
+    "id": 105,
+    "category": "Security",
+    "q": "What is Secret Management?",
+    "a": "Safely storing and managing sensitive data like API keys, passwords, and certificates (e.g., HashiCorp Vault)."
+  },
+  {
+    "id": 106,
+    "category": "Databases",
+    "q": "What is a Tombstone in distributed DBs?",
+    "a": "A record in a distributed data store used to mark an item as deleted without immediate physical removal."
+  },
+  {
+    "id": 107,
+    "category": "Fundamentals",
+    "q": "What is Dark Launching?",
+    "a": "Deploying a new feature to production but keeping it hidden from users, typically to test its performance under load."
+  },
+  {
+    "id": 108,
+    "category": "Performance",
+    "q": "What is Pre-fetching?",
+    "a": "A technique where data is fetched before it is actually needed by the user, based on predicted future use."
+  },
+  {
+    "id": 109,
+    "category": "Microservices",
+    "q": "What is API Composition?",
+    "a": "A pattern where a client or gateway invokes multiple microservices and aggregates the results into a single response."
+  },
+  {
+    "id": 110,
+    "category": "Fundamentals",
+    "q": "What is Mean Time To Recovery (MTTR)?",
+    "a": "The average time it takes to restore a system to full functionality after a failure."
+  },
+  {
+    "id": 111,
+    "category": "Fundamentals",
+    "q": "What is Mean Time Between Failures (MTBF)?",
+    "a": "The average time elapsed between failures of a repairable system."
+  },
+  {
+    "id": 112,
+    "category": "Architecture Patterns",
+    "q": "What is 'Clean Architecture'?",
+    "a": "A software design philosophy that promotes the separation of concerns by dividing software into layers with strict dependency rules."
+  },
+  {
+    "id": 113,
+    "category": "Databases",
+    "q": "What is OLTP vs OLAP?",
+    "a": "OLTP: Online Transactional Processing (fast, small updates). OLAP: Online Analytical Processing (complex, big queries)."
+  },
+  {
+    "id": 114,
+    "category": "Performance",
+    "q": "What is the 'Thundering Herd' problem?",
+    "a": "Occurs when a large number of processes waiting for an event are all awakened when the event occurs, but only one can handle it."
+  },
+  {
+    "id": 115,
+    "category": "Messaging",
+    "q": "What is Message Ordering?",
+    "a": "The guarantee that messages are received by a consumer in the same order they were sent by a producer."
+  },
+  {
+    "id": 116,
+    "category": "Security",
+    "q": "What is Defense in Depth?",
+    "a": "A strategy that uses multiple security layers to protect data and assets."
+  },
+  {
+    "id": 117,
+    "category": "Distributed Systems",
+    "q": "What is a Logical Clock?",
+    "a": "A mechanism for capturing chronological and causal relationships in a distributed system (e.g., Lamport timestamps)."
+  },
+  {
+    "id": 118,
+    "category": "Storage",
+    "q": "What is a Bloom Filter?",
+    "a": "A space-efficient probabilistic data structure used to test whether an element is a member of a set (may have false positives)."
+  },
+  {
+    "id": 119,
+    "category": "Performance",
+    "q": "What is Connection Draining?",
+    "a": "A feature that allows a load balancer to complete in-flight requests to a server while stopping new requests from being sent to it."
+  },
+  {
+    "id": 120,
+    "category": "Fundamentals",
+    "q": "What is the 'Golden Circle' of monitoring?",
+    "a": "The four golden signals: Latency, Traffic, Errors, and Saturation."
+  },
+  {
+    "id": 121,
+    "category": "Scenario",
+    "q": "How to handle 1 million concurrent users on a chat app?",
+    "a": "Use WebSockets, Load Balancers, Distributed Message Caches (Redis), and Sharded DBs."
+  },
+  {
+    "id": 122,
+    "category": "Scenario",
+    "q": "How to design a URL Shortener?",
+    "a": "Key-value store (NoSQL), Hashing algorithm (Base62), and caching for popular URLs."
+  },
+  {
+    "id": 123,
+    "category": "Scenario",
+    "q": "Why use a Microkernel for OS design but Microservices for Web Apps?",
+    "a": "Both aim for modularity and isolation, making systems more resilient to individual module failures."
+  },
+  {
+    "id": 124,
+    "category": "Scenario",
+    "q": "What happens if a DB shard goes down?",
+    "a": "Traffic to that shard fails unless there are replicas. If using master-slave, a slave must be promoted."
+  },
+  {
+    "id": 125,
+    "category": "Fundamentals",
+    "q": "What is 'Polyglot Persistence'?",
+    "a": "Using different database technologies to handle different storage needs (e.g., Neo4j for relationships, Redis for cache)."
+  }
+]
