@@ -11,9 +11,11 @@ interface SetupViewProps {
 
 export default function SetupView({ onStartTest, onStartCourse, savedCourse, onResumeCourse, onDiscardCourse }: SetupViewProps) {
   const [numQuestions, setNumQuestions] = useState(10);
-
+  const increment = () => setValue(value+1);
+  const decrement = () => setValue(Math.max(1, value - 1));
+  const [value,setValue] = useState(1);
   return (
-    <div className="text-center max-w-lg font-mono ">
+    <div className="text-center max-w-1/2 mx-auto font-mono ">
   {savedCourse && (
     <div className="mb-10">
       <div className="bg-purple-200 p-8 border-[2pt] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
@@ -42,17 +44,12 @@ export default function SetupView({ onStartTest, onStartCourse, savedCourse, onR
     </div>
   )}
 
-  {/* Main Title Section */}
+  {/* Main Title Section
   <div className="mb-10">
-    {/* <h2 className="text-4xl uppercase font-semibold leading-none tracking-tighter">
-      <span className="text-red-600">Ready </span>
-      <span className="text-black/80 lowercase text-4xl">To </span>
-      <span className="text-blue-600 ">Start?</span>
-    </h2> */}
     <p className="mt-4 text-sm font-bold uppercase tracking-tight text-gray-500">
       Select materials. Initialize practice. Log data.
     </p>
-  </div>
+  </div> */}
 
   <div className="bg-white p-8 box-shadow">
     {/* Random Test Section */}
@@ -62,16 +59,29 @@ export default function SetupView({ onStartTest, onStartCourse, savedCourse, onR
       </h3>
       <div className="flex items-center justify-center gap-4 mb-6">
         <label htmlFor="num-questions" className="font-black uppercase text-sm">Quantity:</label>
-        <input
-          type="number"
-          id="num-questions"
-          value={numQuestions}
-          onChange={(e) => setNumQuestions(Math.max(1, parseInt(e.target.value, 10) || 1))}
-          className="w-24 p-2 text-center text-xl font-black border-[2pt] border-black focus:bg-yellow-100 outline-none"
-        />
+        <div className="flex items-center border-[3pt] border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+      <button 
+        onClick={decrement}
+        className="px-4 py-2 border-r-[3pt] border-black hover:bg-red-400 active:translate-y-1 transition-all font-black text-2xl"
+      >
+        -
+      </button>
+      <input
+        type="text"
+        value={value}
+        readOnly
+        className="w-16 text-center text-xl font-black outline-none bg-transparent"
+      />
+      <button 
+        onClick={increment}
+        className="px-4 py-2 border-l-[3pt] border-black hover:bg-green-400 active:translate-y-1 transition-all font-black text-2xl"
+      >
+        +
+      </button>
+    </div>
       </div>
       <button
-        onClick={() => onStartTest(numQuestions)}
+        onClick={() => onStartTest(value)}
         className="
         bg-blue-500 text-white 
         box-button-animate hover:bg-indigo-600"
@@ -81,19 +91,15 @@ export default function SetupView({ onStartTest, onStartCourse, savedCourse, onR
     </div>
 
     {/* Decorative Divider */}
-    <div className="relative my-10 flex items-center justify-center">
-      <div className="w-full border-t-[2pt] border-black"></div>
-      <span className="absolute bg-white px-4 font-black text-2xl italic">OR</span>
+    <div className="relative mb-4 mt-8 flex items-center justify-center">
+      <div className="w-full border-t-[2pt] border-black"/>
+      <span className="absolute bg-white px-4 font-black text-2xl font-mono">OR</span>
     </div>
-
     {/* Course Section */}
     <div>
-      <h3 className="text-md font-black uppercase mb-2 text-left border-b-[2pt] border-black pb-1 inline-block">
+      <h3 className="text-md font-black uppercase mb-2 text-left border-b-[2pt] border-black  inline-block">
         Linear Course
       </h3>
-      <p className="text-[10px] font-bold text-gray-400 uppercase mb-4 text-left">
-        Sequential execution of all selected modules.
-      </p>
       <button
         onClick={onStartCourse}
         className="w-full py-4 bg-red-500 text-white box-button-animate hover:bg-rose-600"

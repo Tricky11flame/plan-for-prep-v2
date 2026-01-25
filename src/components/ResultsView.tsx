@@ -5,7 +5,7 @@ interface ResultsViewProps {
 
 export default function ResultsView({ completedCount, onBackToMain }: ResultsViewProps) {
   return (
-    <div className="text-center max-w-lg font-mono">
+    <div className="text-center max-w-1/2 mx-auto pt-8 font-mono">
   {/* Header with italicized tilt for urgency */}
   <h2 className="text-5xl font-black mb-6 uppercase italic tracking-tighter text-black">
     Session Complete!
